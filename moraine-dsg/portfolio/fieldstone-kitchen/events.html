@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events — Fieldstone Kitchen | Oakville, Ontario</title>
+  <meta name="description" content="Upcoming events at Fieldstone Kitchen — live jazz brunches, seasonal menus, community mornings, and special dinners. Oakville, Ontario." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================ -->
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Fieldstone Kitchen – Home">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Fieldstone Kitchen
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-reserve">Reserve a Table</a>
+        </li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn-reserve-mobile">Reserve a Table</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- ============================================
+         PAGE HEADER
+    ============================================ -->
+    <header class="page-header">
+      <span class="eyebrow">What's On</span>
+      <h1>Events at Fieldstone Kitchen.</h1>
+      <p>From seasonal menus to live music mornings — there's always something worth coming in for.</p>
+      <div class="divider" aria-hidden="true"><span>✦</span></div>
+    </header>
+
+    <!-- ============================================
+         EVENTS LIST
+    ============================================ -->
+    <section class="events-list" aria-label="Events list">
+
+      <!-- Event 1 — Live Jazz Sunday (Recurring) -->
+      <article class="event-item" aria-labelledby="event-jazz">
+        <img
+          class="event-item-image"
+          src="https://picsum.photos/seed/jazzguitarist/800/580"
+          alt="Acoustic guitarist performing in a warm cafe setting to a small, relaxed audience"
+          loading="lazy"
+        />
+        <div class="event-item-content">
+          <span class="event-category-tag tag--music">Music</span>
+          <h2 id="event-jazz">Live Jazz Sunday</h2>
+          <p class="event-item-date">Every Sunday, 10:00am – 1:00pm</p>
+          <p>A rotating duo of local jazz musicians plays through the full weekend brunch service — a little something to make Sunday morning feel like what it should. No cover charge, no ticket required. Just show up, find a table, and let the music do its thing.</p>
+          <a href="contact.html" class="btn btn-outline">Reserve Your Table</a>
+        </div>
+      </article>
+
+      <!-- Event 2 — Holiday Brunch (Seasonal, reversed) -->
+      <article class="event-item reverse" aria-labelledby="event-holiday">
+        <img
+          class="event-item-image"
+          src="https://picsum.photos/seed/holidaybrunch/800/580"
+          alt="Festive holiday brunch table setting with candles, warm seasonal decor, and a beautifully dressed tablescape"
+          loading="lazy"
+        />
+        <div class="event-item-content">
+          <span class="event-category-tag tag--seasonal">Seasonal Menu</span>
+          <h2 id="event-holiday">Holiday Brunch Menu — Christmas Edition</h2>
+          <p class="event-item-date">December 21 – 26, 2024</p>
+          <p>A limited-run holiday menu featuring seasonal specials alongside our classics — think warm spiced porridges, smoked salmon with all the trimmings, and a pastry board that earns its place on the table. Running for six days only, so reservation is strongly recommended.</p>
+          <a href="contact.html" class="btn btn-outline">Reserve a Spot</a>
+        </div>
+      </article>
+
+      <!-- Event 3 — Community Morning (Recurring) -->
+      <article class="event-item" aria-labelledby="event-community">
+        <img
+          class="event-item-image"
+          src="https://picsum.photos/seed/communitymorning/800/580"
+          alt="A casual community morning gathering at the cafe — neighbours with coffee cups, relaxed conversation, warm atmosphere"
+          loading="lazy"
+        />
+        <div class="event-item-content">
+          <span class="event-category-tag tag--community">Community</span>
+          <h2 id="event-community">Community Morning — First Saturday</h2>
+          <p class="event-item-date">First Saturday of each month, 8:00am – 10:00am</p>
+          <p>A monthly informal morning for neighbours, regulars, and anyone curious enough to walk in. Coffee on us for the first hour, light snacks on the table, and good conversation with whoever shows up. No agenda — just a chance to connect with the people who make this neighbourhood worth living in.</p>
+          <a href="contact.html" class="btn btn-outline">Come Say Hello</a>
+        </div>
+      </article>
+
+      <!-- Event 4 — Thanksgiving Weekend (Seasonal, reversed) -->
+      <article class="event-item reverse" aria-labelledby="event-thanksgiving">
+        <img
+          class="event-item-image"
+          src="https://picsum.photos/seed/thanksgivingharvest/800/580"
+          alt="Thanksgiving harvest table with a warm autumn food spread, candles, and rich seasonal colours"
+          loading="lazy"
+        />
+        <div class="event-item-content">
+          <span class="event-category-tag tag--seasonal">Seasonal Menu</span>
+          <h2 id="event-thanksgiving">Thanksgiving Weekend Brunch</h2>
+          <p class="event-item-date">October 12 – 14, 2024</p>
+          <p>Extended Thanksgiving weekend service with a special harvest menu built around the best of the fall season — roasted pumpkin, squash, apple, and all the warming spices that belong on a long weekend table. Our classics are still on offer, but you'll want to see what's new.</p>
+          <a href="contact.html" class="btn btn-outline">Reserve for the Weekend</a>
+        </div>
+      </article>
+
+      <!-- Event 5 — Chef's Demo Evening (One-Time) -->
+      <article class="event-item" aria-labelledby="event-chef">
+        <img
+          class="event-item-image"
+          src="https://picsum.photos/seed/chefdemo/800/580"
+          alt="Chef presenting dishes at an intimate cooking demonstration for a small, attentive audience"
+          loading="lazy"
+        />
+        <div class="event-item-content">
+          <span class="event-category-tag tag--special">Special Event</span>
+          <h2 id="event-chef">Kitchen Table — Chef's Demo Evening</h2>
+          <p class="event-item-date">November 8, 2024</p>
+          <p>A limited-seat evening where our head chef walks through a four-course seasonal tasting menu — live, in the kitchen, with wine pairing suggestions for each dish. It's the kind of evening that turns into a two-hour conversation about food. Tickets required; capacity is intentionally small.</p>
+          <a href="contact.html" class="btn btn-outline">Inquire About Tickets</a>
+        </div>
+      </article>
+
+      <!-- Event 6 — Spring Menu Launch (Seasonal, reversed) -->
+      <article class="event-item reverse" aria-labelledby="event-spring">
+        <img
+          class="event-item-image"
+          src="https://picsum.photos/seed/springbrunch/800/580"
+          alt="Spring brunch spread with fresh flowers on the table, bright natural window light, and vibrant seasonal ingredients"
+          loading="lazy"
+        />
+        <div class="event-item-content">
+          <span class="event-category-tag tag--seasonal">Seasonal Menu</span>
+          <h2 id="event-spring">Spring Menu Launch</h2>
+          <p class="event-item-date">April 5, 2025</p>
+          <p>A celebration of the new season — our full spring menu rolls out with weekend specials, new drinks on the board, and a few surprises worth showing up for. Light, bright, and built around whatever looks best at the market that week. Walk-ins welcome all weekend.</p>
+          <a href="contact.html" class="btn btn-outline">Reserve for Opening Weekend</a>
+        </div>
+      </article>
+
+    </section>
+
+    <!-- ============================================
+         EVENTS FOOTER CTA
+    ============================================ -->
+    <section class="events-footer-cta" aria-label="Private events call to action">
+      <span class="eyebrow">Private Events</span>
+      <h2>Host Your Event at Fieldstone.</h2>
+      <p>We offer private space and full catering for intimate gatherings, team dinners, and special occasions. Get in touch and we'll make it work.</p>
+      <a href="catering.html" class="btn btn-primary">Inquire About Private Events</a>
+    </section>
+
+    <!-- ============================================
+         FOOTER CTA
+    ============================================ -->
+    <section class="footer-cta" aria-label="Footer call to action">
+      <h2>Come hungry. Leave happy.</h2>
+      <p>Fieldstone Kitchen — Open daily, Oakville, ON.</p>
+      <div class="footer-cta-links">
+        <a href="menu.html">View Menu</a>
+        <a href="contact.html">Find Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          Fieldstone Kitchen
+        </div>
+        <p class="footer-blurb">A family-run cafe and catering company in the heart of Oakville, Ontario. Fresh, seasonal food made from scratch, every single day.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <p class="footer-heading">Hours &amp; Contact</p>
+        <p>Mon – Fri: 7:00am – 4:00pm<br />Sat – Sun: 8:00am – 5:00pm</p>
+        <address>
+          Oakville, ON<br />
+          <a href="tel:+19055550142">(905) 555-0142</a><br />
+          <a href="mailto:hello@fieldstonekitchen.ca">hello@fieldstonekitchen.ca</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Fieldstone Kitchen. All rights reserved.</p>
+      <p>Designed by Moraine DSG</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

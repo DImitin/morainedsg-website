@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu — Fieldstone Kitchen | Oakville, Ontario</title>
+  <meta name="description" content="Browse the full Fieldstone Kitchen menu — fresh seasonal breakfast, lunch, baked goods, and drinks. Made from scratch daily in Oakville, ON." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================ -->
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Fieldstone Kitchen – Home">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Fieldstone Kitchen
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-reserve">Reserve a Table</a>
+        </li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn-reserve-mobile">Reserve a Table</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- ============================================
+         PAGE HEADER
+    ============================================ -->
+    <header class="page-header">
+      <span class="eyebrow">What We Serve</span>
+      <h1>The Fieldstone Menu.</h1>
+      <p>Made fresh daily. Ingredients sourced seasonally. Something for everyone at the table.</p>
+      <div class="divider" aria-hidden="true"><span>✦</span></div>
+    </header>
+
+    <!-- ============================================
+         DIETARY TAG LEGEND
+    ============================================ -->
+    <div class="menu-tag-legend" role="note" aria-label="Dietary tag legend">
+      <div class="tag-legend-inner">
+        <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+        <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+        <span class="diet-tag diet-tag--df">🥛 Dairy-Free</span>
+        <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+        <p class="tag-legend-note">Please inform your server of any allergies. Menu items and availability may vary seasonally.</p>
+      </div>
+    </div>
+
+    <!-- ============================================
+         MENU BODY
+    ============================================ -->
+    <div class="menu-body">
+
+      <!-- BREAKFAST -->
+      <section class="menu-section" aria-labelledby="section-breakfast">
+        <div class="menu-section-header">
+          <h2 id="section-breakfast">Breakfast</h2>
+          <p class="menu-section-note">Served daily until 11:30am</p>
+        </div>
+        <div class="menu-section-divider" aria-hidden="true"></div>
+        <div class="menu-grid" role="list">
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Brioche Benedict</span>
+              <span class="menu-item-price">$18</span>
+            </div>
+            <p class="menu-item-desc">Poached eggs, house hollandaise, shaved ham on toasted brioche — a Fieldstone classic that earns its place on the board every single morning.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Seasonal Grain Bowl</span>
+              <span class="menu-item-price">$16</span>
+            </div>
+            <p class="menu-item-desc">Warm farro, roasted root vegetables, a soft-boiled egg, and a generous drizzle of tahini. Changes with the season — always worth ordering.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Buttermilk Pancake Stack</span>
+              <span class="menu-item-price">$14</span>
+            </div>
+            <p class="menu-item-desc">Three thick pancakes, whipped butter, and pure Ontario maple syrup. Simple, honest, and exactly what a Sunday morning should taste like.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Smoked Salmon Plate</span>
+              <span class="menu-item-price">$21</span>
+            </div>
+            <p class="menu-item-desc">House cream cheese, capers, thinly sliced red onion, fresh dill, and toasted sourdough. Refined without being fussy.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Avocado Toast</span>
+              <span class="menu-item-price">$15</span>
+            </div>
+            <p class="menu-item-desc">Multigrain toast, smashed avocado, chili flakes, lemon, and a sprinkle of flaky sea salt. Add a poached egg for $3.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+              <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Classic Eggs &amp; Toast</span>
+              <span class="menu-item-price">$13</span>
+            </div>
+            <p class="menu-item-desc">Two eggs any style, your choice of toast, and a side of fresh seasonal fruit. The kind of breakfast that never goes out of style.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Soft Scramble &amp; Brie</span>
+              <span class="menu-item-price">$17</span>
+            </div>
+            <p class="menu-item-desc">Slow-cooked scrambled eggs with a knob of creamy brie, chives, and cracked pepper on a toasted country loaf.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">The Full Fieldstone</span>
+              <span class="menu-item-price">$23</span>
+            </div>
+            <p class="menu-item-desc">Two eggs, house bacon, roasted tomato, sautéed mushrooms, toast, and a side of fruit. The full picture, on one plate.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- LUNCH -->
+      <section class="menu-section" aria-labelledby="section-lunch">
+        <div class="menu-section-header">
+          <h2 id="section-lunch">Lunch</h2>
+          <p class="menu-section-note">Served from 11:30am</p>
+        </div>
+        <div class="menu-section-divider" aria-hidden="true"></div>
+        <div class="menu-grid" role="list">
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Fieldstone Club Sandwich</span>
+              <span class="menu-item-price">$19</span>
+            </div>
+            <p class="menu-item-desc">House-roasted turkey, crisp bacon, avocado, tomato, and herb aioli on toasted brioche. A proper club, done properly.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Roasted Tomato Bisque</span>
+              <span class="menu-item-price">$16</span>
+            </div>
+            <p class="menu-item-desc">Rich, slow-roasted tomato soup served with a grilled cheese half on the side. Deeply comforting, available year-round.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Harvest Salad</span>
+              <span class="menu-item-price">$17</span>
+            </div>
+            <p class="menu-item-desc">Mixed greens, candied pecans, creamy goat cheese, dried cranberry, and apple cider vinaigrette. Add grilled chicken for $6.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+              <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Grilled Chicken Panini</span>
+              <span class="menu-item-price">$20</span>
+            </div>
+            <p class="menu-item-desc">House pesto, roasted red pepper, fresh mozzarella, and grilled chicken pressed in ciabatta. Served with a small green salad.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Mushroom Flatbread</span>
+              <span class="menu-item-price">$18</span>
+            </div>
+            <p class="menu-item-desc">Caramelized onion, wild mushroom, fresh thyme, truffle oil, and a handful of peppery arugula. Earthy, rich, and endlessly satisfying.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Smash Burger</span>
+              <span class="menu-item-price">$22</span>
+            </div>
+            <p class="menu-item-desc">Double smash patty, aged cheddar, house pickles, shredded lettuce, and Fieldstone sauce on a toasted brioche bun. Fries optional, $5.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Tuna Niçoise</span>
+              <span class="menu-item-price">$21</span>
+            </div>
+            <p class="menu-item-desc">Seared albacore tuna, green beans, olives, soft-boiled egg, cherry tomatoes, and Dijon vinaigrette on a bed of butter lettuce.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+              <span class="diet-tag diet-tag--df">🥛 Dairy-Free</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">French Onion Soup</span>
+              <span class="menu-item-price">$15</span>
+            </div>
+            <p class="menu-item-desc">Slow-caramelized onions, rich beef broth, topped with a thick crouton and a generous blanket of Gruyère. Broiled to order.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- BAKED GOODS -->
+      <section class="menu-section" aria-labelledby="section-baked">
+        <div class="menu-section-header">
+          <h2 id="section-baked">Baked Goods &amp; Pastries</h2>
+          <p class="menu-section-note">Available daily while supplies last</p>
+        </div>
+        <div class="menu-section-divider" aria-hidden="true"></div>
+        <div class="menu-grid" role="list">
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Butter Croissant</span>
+              <span class="menu-item-price">$4.50</span>
+            </div>
+            <p class="menu-item-desc">Laminated with real butter, baked fresh each morning. Shatters the right way. Worth coming in early.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Seasonal Scone</span>
+              <span class="menu-item-price">$5</span>
+            </div>
+            <p class="menu-item-desc">Ask your server for today's flavour. Could be lemon lavender, cranberry orange, or something new — changes with what's in season.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Banana Walnut Loaf</span>
+              <span class="menu-item-price">$5.50</span>
+            </div>
+            <p class="menu-item-desc">Sliced to order, lightly toasted on request. Dense, moist, and just sweet enough. A reliable comfort in any season.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Almond Raspberry Tart</span>
+              <span class="menu-item-price">$7</span>
+            </div>
+            <p class="menu-item-desc">Frangipane base, a generous spoonful of house jam, and toasted sliced almonds. Individual-sized and best enjoyed with an afternoon coffee.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Double Chocolate Brownie</span>
+              <span class="menu-item-price">$6</span>
+            </div>
+            <p class="menu-item-desc">Dense, fudgy, finished with a dusting of flaky sea salt. The kind of brownie that makes you order a second coffee just to justify another piece.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--gf">🌾 Gluten-Friendly</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Morning Bun</span>
+              <span class="menu-item-price">$5</span>
+            </div>
+            <p class="menu-item-desc">Laminated dough rolled in orange zest sugar and cinnamon, baked until golden and slightly caramelized at the edges.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- DRINKS -->
+      <section class="menu-section" aria-labelledby="section-drinks">
+        <div class="menu-section-header">
+          <h2 id="section-drinks">Drinks</h2>
+        </div>
+        <div class="menu-section-divider" aria-hidden="true"></div>
+        <div class="menu-grid" role="list">
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">House Latte</span>
+              <span class="menu-item-price">$6 / $6.50</span>
+            </div>
+            <p class="menu-item-desc">Double shot, steamed whole or oat milk. Our most-ordered drink, and for good reason. Available hot or iced.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--fav">⭐ House Favourite</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Matcha Latte</span>
+              <span class="menu-item-price">$6.50</span>
+            </div>
+            <p class="menu-item-desc">Ceremonial grade matcha, steamed milk, lightly sweetened. Earthy, clean, and a genuinely good alternative to coffee.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+              <span class="diet-tag diet-tag--df">🥛 Dairy-Free</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Cold Brew</span>
+              <span class="menu-item-price">$5.50</span>
+            </div>
+            <p class="menu-item-desc">18-hour steep, served over ice. Smooth and low-acid — made overnight so it's ready the moment we open.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+              <span class="diet-tag diet-tag--df">🥛 Dairy-Free</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Fresh Juice</span>
+              <span class="menu-item-price">$7</span>
+            </div>
+            <p class="menu-item-desc">Pressed orange, a bright green blend, or our seasonal rotation. Ask your server what's fresh today.</p>
+            <div class="menu-item-tags">
+              <span class="diet-tag diet-tag--vegan">🌱 Vegan</span>
+              <span class="diet-tag diet-tag--df">🥛 Dairy-Free</span>
+            </div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Chai Latte</span>
+              <span class="menu-item-price">$6</span>
+            </div>
+            <p class="menu-item-desc">House spiced chai concentrate, steamed milk. Warm, spiced, and properly made — not from a powder.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+          <article class="menu-item" role="listitem">
+            <div class="menu-item-top">
+              <span class="menu-item-name">Sparkling Water</span>
+              <span class="menu-item-price">$4</span>
+            </div>
+            <p class="menu-item-desc">San Pellegrino, 500ml. Served chilled with a slice of lemon on request.</p>
+            <div class="menu-item-tags"></div>
+          </article>
+
+        </div>
+      </section>
+
+    </div><!-- /.menu-body -->
+
+    <!-- ============================================
+         MENU FOOTER NOTE
+    ============================================ -->
+    <div class="menu-footer-note">
+      <p>Our menu changes seasonally. Follow us for updates, or ask your server about today's specials and off-menu items.</p>
+      <a href="catering.html" class="btn btn-outline">Interested in Catering?</a>
+    </div>
+
+    <!-- ============================================
+         FOOTER CTA
+    ============================================ -->
+    <section class="footer-cta" aria-label="Footer call to action">
+      <h2>Come hungry. Leave happy.</h2>
+      <p>Fieldstone Kitchen — Open daily, Oakville, ON.</p>
+      <div class="footer-cta-links">
+        <a href="index.html">Back to Home</a>
+        <a href="contact.html">Find Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          Fieldstone Kitchen
+        </div>
+        <p class="footer-blurb">A family-run cafe and catering company in the heart of Oakville, Ontario. Fresh, seasonal food made from scratch, every single day.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <p class="footer-heading">Hours &amp; Contact</p>
+        <p>Mon – Fri: 7:00am – 4:00pm<br />Sat – Sun: 8:00am – 5:00pm</p>
+        <address>
+          Oakville, ON<br />
+          <a href="tel:+19055550142">(905) 555-0142</a><br />
+          <a href="mailto:hello@fieldstonekitchen.ca">hello@fieldstonekitchen.ca</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Fieldstone Kitchen. All rights reserved.</p>
+      <p>Designed by Moraine DSG</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

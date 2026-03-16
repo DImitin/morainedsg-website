@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Reservations — Fieldstone Kitchen | Oakville, Ontario</title>
+  <meta name="description" content="Find Fieldstone Kitchen in Oakville, Ontario. Hours, contact information, online reservations, and a general inquiry form." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================ -->
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Fieldstone Kitchen – Home">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Fieldstone Kitchen
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="#" class="btn-reserve js-reserve-trigger">Reserve a Table</a>
+        </li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="btn-reserve-mobile js-reserve-trigger">Reserve a Table</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- ============================================
+         PAGE HEADER
+    ============================================ -->
+    <header class="page-header">
+      <h1>Find Us.</h1>
+      <p>Come in, call ahead, or send us a message. We're always happy to hear from you.</p>
+      <div class="divider" aria-hidden="true"><span>✦</span></div>
+    </header>
+
+    <!-- ============================================
+         CONTACT BODY
+    ============================================ -->
+    <div class="contact-body">
+
+      <!-- LEFT — Contact Info & Hours -->
+      <div class="contact-info-col">
+        <h2>Visit &amp; Connect</h2>
+
+        <div class="contact-detail-block">
+          <h4>Location</h4>
+          <address>
+            Oakville, Ontario<br />
+            (Specific address provided upon reservation confirmation)
+          </address>
+        </div>
+
+        <div class="contact-detail-block">
+          <h4>Phone</h4>
+          <p><a href="tel:+19055550142">(905) 555-0142</a></p>
+        </div>
+
+        <div class="contact-detail-block">
+          <h4>Email</h4>
+          <p><a href="mailto:hello@fieldstonekitchen.ca">hello@fieldstonekitchen.ca</a></p>
+        </div>
+
+        <div class="contact-detail-block">
+          <h4>Hours</h4>
+          <div>
+            <div class="contact-hours-row">
+              <span class="contact-hours-label">Monday – Friday</span>
+              <span>7:00am – 4:00pm</span>
+            </div>
+            <div class="contact-hours-row">
+              <span class="contact-hours-label">Saturday – Sunday</span>
+              <span>8:00am – 5:00pm</span>
+            </div>
+            <div class="contact-hours-row">
+              <span class="contact-hours-label">Christmas Day</span>
+              <span>Closed</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESERVATION BLOCK -->
+        <div class="contact-reserve-block" id="reserve" aria-labelledby="reserve-heading">
+          <h4 id="reserve-heading">Reserve a Table</h4>
+          <p>We recommend reserving ahead for weekends and holidays. Walk-ins are always welcome based on availability — we'll do our best to find you a spot.</p>
+          <!-- In production, this links to the client's live reservation system (Google Reserve, OpenTable, Reso, or similar). -->
+          <a href="#" class="btn btn-primary js-reserve-trigger">Reserve Online</a>
+          <span class="reservation-note">Online reservations are managed through our booking platform.</span>
+        </div>
+
+      </div><!-- /.contact-info-col -->
+
+      <!-- RIGHT — General Inquiry Form -->
+      <div class="contact-form-col">
+        <h2>Send Us a Message</h2>
+        <form data-demo aria-label="General inquiry form" novalidate>
+
+          <div class="form-group">
+            <label for="contact-name">Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="Your name" autocomplete="name" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="you@example.com" autocomplete="email" />
+          </div>
+
+          <div class="form-group">
+            <label for="contact-subject">Subject</label>
+            <select id="contact-subject" name="subject">
+              <option value="" disabled selected>Select a subject</option>
+              <option value="general">General Question</option>
+              <option value="feedback">Feedback</option>
+              <option value="press">Press / Media</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" name="message" rows="4" placeholder="How can we help?"></textarea>
+          </div>
+
+          <div class="form-submit-wrap" style="text-align: left; margin-top: 8px;">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </div>
+
+        </form>
+      </div><!-- /.contact-form-col -->
+
+    </div><!-- /.contact-body -->
+
+    <!-- ============================================
+         FOOTER CTA
+    ============================================ -->
+    <section class="footer-cta" aria-label="Footer call to action">
+      <h2>Come hungry. Leave happy.</h2>
+      <p>Fieldstone Kitchen — Open daily, Oakville, ON.</p>
+      <div class="footer-cta-links">
+        <a href="menu.html">View Menu</a>
+        <a href="catering.html">Catering</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          Fieldstone Kitchen
+        </div>
+        <p class="footer-blurb">A family-run cafe and catering company in the heart of Oakville, Ontario. Fresh, seasonal food made from scratch, every single day.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <p class="footer-heading">Hours &amp; Contact</p>
+        <p>Mon – Fri: 7:00am – 4:00pm<br />Sat – Sun: 8:00am – 5:00pm</p>
+        <address>
+          Oakville, ON<br />
+          <a href="tel:+19055550142">(905) 555-0142</a><br />
+          <a href="mailto:hello@fieldstonekitchen.ca">hello@fieldstonekitchen.ca</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Fieldstone Kitchen. All rights reserved.</p>
+      <p>Designed by Moraine DSG</p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       RESERVATION MODAL
+  ============================================ -->
+  <div
+    id="reservationModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-container">
+
+      <button class="modal-close" aria-label="Close reservation modal">
+        <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <h2 id="modalTitle">Reserve a Table</h2>
+      </div>
+      <span class="modal-subtext">Fieldstone Kitchen &middot; Oakville, ON</span>
+      <div class="modal-divider" aria-hidden="true"></div>
+
+      <form id="reservationForm" class="modal-form" novalidate>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" name="date" autocomplete="off" />
+            <span class="field-error">Please select a date.</span>
+          </div>
+          <div class="form-group">
+            <label for="res-time">Time</label>
+            <select id="res-time" name="time">
+              <option value="" disabled selected>Select a time</option>
+              <option value="0800">8:00 am</option>
+              <option value="0830">8:30 am</option>
+              <option value="0900">9:00 am</option>
+              <option value="0930">9:30 am</option>
+              <option value="1000">10:00 am</option>
+              <option value="1030">10:30 am</option>
+              <option value="1100">11:00 am</option>
+              <option value="1130">11:30 am</option>
+              <option value="1200">12:00 pm</option>
+              <option value="1230">12:30 pm</option>
+              <option value="1300">1:00 pm</option>
+              <option value="1330">1:30 pm</option>
+              <option value="1400">2:00 pm</option>
+              <option value="1430">2:30 pm</option>
+              <option value="1500">3:00 pm</option>
+              <option value="1530">3:30 pm</option>
+              <option value="1600">4:00 pm</option>
+              <option value="1630">4:30 pm</option>
+              <option value="1700">5:00 pm</option>
+              <option value="1730">5:30 pm</option>
+              <option value="1800">6:00 pm</option>
+              <option value="1830">6:30 pm</option>
+              <option value="1900">7:00 pm</option>
+              <option value="1930">7:30 pm</option>
+              <option value="2000">8:00 pm</option>
+            </select>
+            <span class="field-error">Please select a time.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="res-size">Party Size</label>
+          <select id="res-size" name="party_size">
+            <option value="" disabled selected>Number of guests</option>
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5 guests</option>
+            <option value="6">6 guests</option>
+            <option value="7">7 guests</option>
+            <option value="8">8 guests</option>
+            <option value="9">9 guests</option>
+            <option value="10">10 guests</option>
+            <option value="11+">11+ guests</option>
+          </select>
+          <span class="field-error">Please select a party size.</span>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="res-name">Name</label>
+            <input type="text" id="res-name" name="name" placeholder="Your name" autocomplete="name" />
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="res-phone">Phone</label>
+            <input type="tel" id="res-phone" name="phone" placeholder="(905) 555-0000" autocomplete="tel" />
+            <span class="field-error">Please enter your phone number.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="res-requests">Special Requests <span style="font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <textarea id="res-requests" name="special_requests" rows="2" placeholder="Dietary needs, accessibility, celebrations..."></textarea>
+        </div>
+
+        <button type="submit" class="modal-submit">Request Reservation</button>
+
+      </form>
+
+      <!-- Confirmation screen (hidden until form submits) -->
+      <div class="modal-confirm" aria-live="polite">
+        <div class="modal-confirm-check" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 28l8 8 16-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>You're on the list.</h3>
+        <p class="modal-confirm-message"></p>
+        <span class="modal-confirm-note">This is a demo reservation. In a live deployment, confirmations are sent automatically via the booking platform.</span>
+        <button class="modal-confirm-close">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

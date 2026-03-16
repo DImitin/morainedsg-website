@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fieldstone Kitchen — Cafe & Catering | Oakville, Ontario</title>
+  <meta name="description" content="Fieldstone Kitchen is a family-run cafe and catering company in Oakville, Ontario. Fresh, seasonal menus made from scratch every day." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="home-page">
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================ -->
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Fieldstone Kitchen – Home">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Fieldstone Kitchen
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <!-- In production, this links to the client's live reservation platform. -->
+          <a href="#" class="btn-reserve js-reserve-trigger">Reserve a Table</a>
+        </li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" class="btn-reserve-mobile js-reserve-trigger">Reserve a Table</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <section class="hero" aria-label="Hero banner">
+      <img
+        class="hero-image"
+        src="https://picsum.photos/seed/brunchspread/1920/1080"
+        alt="Beautifully plated brunch spread on a wooden table, natural window light, warm tones"
+        fetchpriority="high"
+      />
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-content">
+        <span class="eyebrow">Oakville, Ontario</span>
+        <h1>Where Every Morning<br><em>Deserves Something Special.</em></h1>
+        <p>Fresh, seasonal menus. A warm room. And a table that's always ready for you.</p>
+        <div class="hero-ctas">
+          <a href="menu.html" class="btn btn-outline-light">View Our Menu</a>
+          <!-- In production, this links to the client's live reservation platform. -->
+          <a href="#" class="btn btn-primary-light js-reserve-trigger">Reserve a Table</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         INTRO STRIP
+    ============================================ -->
+    <section class="intro-strip" aria-label="Brand statement">
+      <div class="divider" aria-hidden="true"><span>✦</span></div>
+      <blockquote>
+        "Family recipes. Seasonal ingredients. Made from scratch, every day."
+      </blockquote>
+      <div class="divider" aria-hidden="true"><span>✦</span></div>
+    </section>
+
+    <!-- ============================================
+         FEATURED MENU HIGHLIGHTS
+    ============================================ -->
+    <section class="menu-highlights" aria-labelledby="highlights-heading">
+      <div class="section-header">
+        <span class="eyebrow">On the Menu</span>
+        <h2 id="highlights-heading">A Little Taste of What's Inside.</h2>
+      </div>
+      <div class="highlight-grid">
+
+        <!-- Card 1 — Breakfast -->
+        <article class="highlight-card">
+          <img
+            class="highlight-card-image"
+            src="https://picsum.photos/seed/eggsbenedict/600/400"
+            alt="Eggs benedict on toasted brioche with a soft yolk, hollandaise sauce, and microgreens — close-up food photography"
+          />
+          <div class="highlight-card-body">
+            <span class="eyebrow">Breakfast</span>
+            <h3>Brioche Benedict</h3>
+            <p>Poached eggs, silky house hollandaise, and shaved ham on a perfectly toasted brioche — the kind of breakfast worth waking up for.</p>
+            <a href="menu.html" class="text-link">See Full Menu</a>
+          </div>
+        </article>
+
+        <!-- Card 2 — Baked Goods -->
+        <article class="highlight-card">
+          <img
+            class="highlight-card-image"
+            src="https://picsum.photos/seed/freshpastry/600/400"
+            alt="Freshly baked croissants and pastries arranged on a marble counter in warm bakery light"
+          />
+          <div class="highlight-card-body">
+            <span class="eyebrow">Baked Goods</span>
+            <h3>Fresh-Baked Daily</h3>
+            <p>Laminated croissants, seasonal scones, and frangipane tarts — made in-house each morning and gone by afternoon.</p>
+            <a href="menu.html" class="text-link">See Full Menu</a>
+          </div>
+        </article>
+
+        <!-- Card 3 — Drinks -->
+        <article class="highlight-card">
+          <img
+            class="highlight-card-image"
+            src="https://picsum.photos/seed/latteceramicwarm/600/400"
+            alt="Latte art poured in a ceramic cup on a cafe table in warm, soft light"
+          />
+          <div class="highlight-card-body">
+            <span class="eyebrow">Drinks</span>
+            <h3>House Latte</h3>
+            <p>Double shot, steamed whole or oat milk — our most-ordered drink, ordered twice as often as anything else on the list.</p>
+            <a href="menu.html" class="text-link">See Full Menu</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         RESERVATION SECTION
+    ============================================ -->
+    <section class="reservation-section" aria-labelledby="reserve-heading">
+      <span class="eyebrow">Reservations</span>
+      <h2 id="reserve-heading"><em>Join Us for Your Next Meal.</em></h2>
+      <p>Whether it's a quiet weekday morning or a weekend brunch with the whole family — we'd love to have you. Reserve your table online, or simply walk in.</p>
+      <!-- In production, this button links to the client's live reservation platform (e.g. Google Reserve, OpenTable, or similar). No specific platform is assumed. -->
+      <a href="#" class="btn btn-primary js-reserve-trigger">Reserve a Table</a>
+      <span class="reservation-note">Reservations powered by our online booking system. Walk-ins always welcome.</span>
+    </section>
+
+    <!-- ============================================
+         CATERING TEASER
+    ============================================ -->
+    <section class="catering-teaser" aria-labelledby="catering-teaser-heading">
+      <img
+        class="catering-teaser-image"
+        src="https://picsum.photos/seed/outdoorcatering/900/640"
+        alt="Elegant catering spread at an outdoor corporate event — white linen tables lined with beautifully arranged platters in warm afternoon light"
+      />
+      <div class="catering-teaser-content">
+        <span class="eyebrow">Catering</span>
+        <h2 id="catering-teaser-heading">Fieldstone in Your Space.</h2>
+        <p>We bring the Fieldstone Kitchen experience to your event. Corporate lunches, private dinners, wedding receptions — we handle the food so you can be fully present for every moment that matters.</p>
+        <a href="catering.html" class="btn btn-outline">Explore Catering</a>
+      </div>
+    </section>
+
+    <!-- ============================================
+         UPCOMING EVENTS PREVIEW
+    ============================================ -->
+    <section class="events-preview" aria-labelledby="events-preview-heading">
+      <span class="eyebrow">What's On</span>
+      <h2 id="events-preview-heading">Always Something Worth Showing Up For.</h2>
+      <div class="events-preview-grid">
+
+        <article class="event-preview-card">
+          <span class="eyebrow">Music</span>
+          <h3>Live Jazz Sunday</h3>
+          <p class="event-date">Every Sunday, 10am – 1pm</p>
+          <p>Local jazz duo playing through weekend brunch service. No cover charge, no reservation needed — just a good table and better music.</p>
+          <a href="events.html" class="text-link-light">See All Events</a>
+        </article>
+
+        <article class="event-preview-card">
+          <span class="eyebrow">Seasonal Menu</span>
+          <h3>Spring Menu Launch</h3>
+          <p class="event-date">April 5, 2025</p>
+          <p>A celebration of the new season — fresh menu rollout with weekend specials, new drinks on the board, and a few surprises worth coming in for.</p>
+          <a href="events.html" class="text-link-light">See All Events</a>
+        </article>
+
+      </div>
+      <a href="events.html" class="btn btn-outline-light">View All Events</a>
+    </section>
+
+    <!-- ============================================
+         FOOTER CTA
+    ============================================ -->
+    <section class="footer-cta" aria-label="Footer call to action">
+      <h2>Come hungry. Leave happy.</h2>
+      <p>Fieldstone Kitchen — Open daily, Oakville, ON.</p>
+      <div class="footer-cta-links">
+        <a href="menu.html">View Menu</a>
+        <a href="contact.html">Find Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          Fieldstone Kitchen
+        </div>
+        <p class="footer-blurb">A family-run cafe and catering company in the heart of Oakville, Ontario. Fresh, seasonal food made from scratch, every single day.</p>
+      </div>
+
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-hours">
+        <p class="footer-heading">Hours &amp; Contact</p>
+        <p>
+          Mon – Fri: 7:00am – 4:00pm<br />
+          Sat – Sun: 8:00am – 5:00pm
+        </p>
+        <address>
+          Oakville, ON<br />
+          <a href="tel:+19055550142">(905) 555-0142</a><br />
+          <a href="mailto:hello@fieldstonekitchen.ca">hello@fieldstonekitchen.ca</a>
+        </address>
+      </div>
+
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Fieldstone Kitchen. All rights reserved.</p>
+      <p>Designed by Moraine DSG</p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       RESERVATION MODAL
+  ============================================ -->
+  <div
+    id="reservationModal"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="modalTitle"
+    aria-hidden="true"
+  >
+    <div class="modal-container">
+
+      <button class="modal-close" aria-label="Close reservation modal">
+        <svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M2 2l14 14M16 2L2 16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <div class="modal-header">
+        <h2 id="modalTitle">Reserve a Table</h2>
+      </div>
+      <span class="modal-subtext">Fieldstone Kitchen &middot; Oakville, ON</span>
+      <div class="modal-divider" aria-hidden="true"></div>
+
+      <form id="reservationForm" class="modal-form" novalidate>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="res-date">Date</label>
+            <input type="date" id="res-date" name="date" autocomplete="off" />
+            <span class="field-error">Please select a date.</span>
+          </div>
+          <div class="form-group">
+            <label for="res-time">Time</label>
+            <select id="res-time" name="time">
+              <option value="" disabled selected>Select a time</option>
+              <option value="0800">8:00 am</option>
+              <option value="0830">8:30 am</option>
+              <option value="0900">9:00 am</option>
+              <option value="0930">9:30 am</option>
+              <option value="1000">10:00 am</option>
+              <option value="1030">10:30 am</option>
+              <option value="1100">11:00 am</option>
+              <option value="1130">11:30 am</option>
+              <option value="1200">12:00 pm</option>
+              <option value="1230">12:30 pm</option>
+              <option value="1300">1:00 pm</option>
+              <option value="1330">1:30 pm</option>
+              <option value="1400">2:00 pm</option>
+              <option value="1430">2:30 pm</option>
+              <option value="1500">3:00 pm</option>
+              <option value="1530">3:30 pm</option>
+              <option value="1600">4:00 pm</option>
+              <option value="1630">4:30 pm</option>
+              <option value="1700">5:00 pm</option>
+              <option value="1730">5:30 pm</option>
+              <option value="1800">6:00 pm</option>
+              <option value="1830">6:30 pm</option>
+              <option value="1900">7:00 pm</option>
+              <option value="1930">7:30 pm</option>
+              <option value="2000">8:00 pm</option>
+            </select>
+            <span class="field-error">Please select a time.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="res-size">Party Size</label>
+          <select id="res-size" name="party_size">
+            <option value="" disabled selected>Number of guests</option>
+            <option value="1">1 guest</option>
+            <option value="2">2 guests</option>
+            <option value="3">3 guests</option>
+            <option value="4">4 guests</option>
+            <option value="5">5 guests</option>
+            <option value="6">6 guests</option>
+            <option value="7">7 guests</option>
+            <option value="8">8 guests</option>
+            <option value="9">9 guests</option>
+            <option value="10">10 guests</option>
+            <option value="11+">11+ guests</option>
+          </select>
+          <span class="field-error">Please select a party size.</span>
+        </div>
+
+        <div class="form-row-2">
+          <div class="form-group">
+            <label for="res-name">Name</label>
+            <input type="text" id="res-name" name="name" placeholder="Your name" autocomplete="name" />
+            <span class="field-error">Please enter your name.</span>
+          </div>
+          <div class="form-group">
+            <label for="res-phone">Phone</label>
+            <input type="tel" id="res-phone" name="phone" placeholder="(905) 555-0000" autocomplete="tel" />
+            <span class="field-error">Please enter your phone number.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="res-requests">Special Requests <span style="font-weight:300;text-transform:none;letter-spacing:0;">(optional)</span></label>
+          <textarea id="res-requests" name="special_requests" rows="2" placeholder="Dietary needs, accessibility, celebrations..."></textarea>
+        </div>
+
+        <button type="submit" class="modal-submit">Request Reservation</button>
+
+      </form>
+
+      <!-- Confirmation screen (hidden until form submits) -->
+      <div class="modal-confirm" aria-live="polite">
+        <div class="modal-confirm-check" aria-hidden="true">
+          <svg viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="28" cy="28" r="26" stroke="currentColor" stroke-width="2"/>
+            <path d="M16 28l8 8 16-16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3>You're on the list.</h3>
+        <p class="modal-confirm-message"></p>
+        <span class="modal-confirm-note">This is a demo reservation. In a live deployment, confirmations are sent automatically via the booking platform.</span>
+        <button class="modal-confirm-close">Close</button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

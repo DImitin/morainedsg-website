@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catering — Fieldstone Kitchen | Oakville, Ontario</title>
+  <meta name="description" content="Fieldstone Kitchen catering for corporate events, private celebrations, and weddings. Submit a catering inquiry for your next event in Oakville and the GTA." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================ -->
+  <nav class="site-nav" id="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Fieldstone Kitchen – Home">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+          <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+        </svg>
+        Fieldstone Kitchen
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="catering.html">Catering</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li>
+          <a href="#" target="_blank" rel="noopener noreferrer" class="btn-reserve">Reserve a Table</a>
+        </li>
+      </ul>
+      <button class="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <nav class="nav-mobile" aria-label="Mobile navigation">
+      <a href="menu.html">Menu</a>
+      <a href="catering.html">Catering</a>
+      <a href="events.html">Events</a>
+      <a href="contact.html">Contact</a>
+      <a href="#" target="_blank" rel="noopener noreferrer" class="btn-reserve-mobile">Reserve a Table</a>
+    </nav>
+  </nav>
+
+  <main>
+
+    <!-- ============================================
+         CATERING HERO
+    ============================================ -->
+    <section class="catering-hero" aria-label="Catering hero banner">
+      <img
+        class="catering-hero-image"
+        src="https://picsum.photos/seed/cateringtable/1600/720"
+        alt="Elegant catering setup — a long table with styled food platters and garnishes under soft event lighting"
+        fetchpriority="high"
+      />
+      <div class="catering-hero-overlay" aria-hidden="true"></div>
+      <div class="catering-hero-content">
+        <span class="eyebrow">Fieldstone Catering</span>
+        <h1>Your Event. Our Kitchen.</h1>
+        <p>From intimate dinners to large corporate events — we bring the same care and craftsmanship to every table we set.</p>
+      </div>
+    </section>
+
+    <!-- ============================================
+         WHAT WE CATER
+    ============================================ -->
+    <section class="catering-offerings" aria-labelledby="offerings-heading">
+      <div class="section-header">
+        <span class="eyebrow">What We Do</span>
+        <h2 id="offerings-heading">Every Occasion, Handled with Care.</h2>
+        <p>We tailor every menu to your event — no two catering orders are exactly alike.</p>
+      </div>
+      <div class="offerings-grid">
+
+        <article class="offering-card">
+          <div class="offering-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="6" y="14" width="32" height="22" rx="2" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M6 20h32" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M14 14V10a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" stroke="currentColor" stroke-width="1.6"/>
+              <circle cx="22" cy="30" r="3" stroke="currentColor" stroke-width="1.5"/>
+            </svg>
+          </div>
+          <h3>Corporate &amp; Office</h3>
+          <p>Boardroom lunches, team appreciation events, client entertaining, and office milestones. We offer delivery and full-service setup — minimal disruption, maximum impression.</p>
+        </article>
+
+        <article class="offering-card">
+          <div class="offering-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M22 8c-3.5 0-7 3-7 7s3.5 7 7 7 7-3 7-7-3.5-7-7-7z" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M8 36c0-7.7 6.3-14 14-14s14 6.3 14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <path d="M28 20l3 3M33 20c0 1.7-1.3 3-3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Private Dining &amp; Celebrations</h3>
+          <p>Birthdays, anniversaries, graduations, family gatherings. We work with you to build a custom menu that fits the occasion — from casual buffet to plated service.</p>
+        </article>
+
+        <article class="offering-card">
+          <div class="offering-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M8 34c0-7 6.3-12 14-12s14 5 14 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+              <circle cx="22" cy="16" r="6" stroke="currentColor" stroke-width="1.6"/>
+              <path d="M18 10c1 1.5 2.5 2 4 2M16 34h12" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+              <path d="M34 18l3-3M34 24l3 3" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <h3>Weddings &amp; Large Events</h3>
+          <p>Full-service catering for your most important day. Menu consultation, day-of coordination, setup, service, and cleanup — we handle the food so you can be fully present.</p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ============================================
+         HOW IT WORKS
+    ============================================ -->
+    <section class="how-it-works" aria-labelledby="how-heading">
+      <div class="section-header">
+        <span class="eyebrow">The Process</span>
+        <h2 id="how-heading">Simple from Start to Finish.</h2>
+      </div>
+      <div class="steps-row">
+        <div class="step">
+          <div class="step-number" aria-hidden="true">1</div>
+          <h3>Submit an Inquiry</h3>
+          <p>Tell us about your event using the form below — date, size, occasion, and any dietary requirements.</p>
+        </div>
+        <div class="step">
+          <div class="step-number" aria-hidden="true">2</div>
+          <h3>We'll Be in Touch</h3>
+          <p>Our catering team follows up within 2 business days to discuss your needs and build a custom quote.</p>
+        </div>
+        <div class="step">
+          <div class="step-number" aria-hidden="true">3</div>
+          <h3>Enjoy Your Event</h3>
+          <p>We handle the rest. You focus on your guests — we take care of everything on the food side.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================
+         CATERING INQUIRY FORM
+    ============================================ -->
+    <section class="catering-form-section" aria-labelledby="form-heading">
+      <div class="form-container">
+        <h2 id="form-heading">Get in Touch About Your Event</h2>
+
+        <!-- In production, this form connects to a catering management or event coordination system — not a generic email inbox. Lead routing and follow-up are handled through that platform. -->
+        <form data-demo aria-label="Catering inquiry form" novalidate>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="catering-name">Full Name</label>
+              <input type="text" id="catering-name" name="name" placeholder="Your full name" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="catering-email">Email Address</label>
+              <input type="email" id="catering-email" name="email" placeholder="you@example.com" autocomplete="email" />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="catering-phone">Phone Number</label>
+              <input type="tel" id="catering-phone" name="phone" placeholder="(905) 555-0000" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="catering-type">Event Type</label>
+              <select id="catering-type" name="event_type">
+                <option value="" disabled selected>Select event type</option>
+                <option value="corporate">Corporate / Office</option>
+                <option value="celebration">Private Celebration</option>
+                <option value="wedding">Wedding</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="catering-date">Event Date</label>
+              <input type="date" id="catering-date" name="event_date" />
+            </div>
+            <div class="form-group">
+              <label for="catering-guests">Estimated Guest Count</label>
+              <select id="catering-guests" name="guest_count">
+                <option value="" disabled selected>Select guest count</option>
+                <option value="under20">Under 20</option>
+                <option value="20-50">20 – 50</option>
+                <option value="50-100">50 – 100</option>
+                <option value="100-200">100 – 200</option>
+                <option value="200plus">200+</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="catering-venue">Event Location / Venue</label>
+            <input type="text" id="catering-venue" name="venue" placeholder="Venue name or address" />
+          </div>
+
+          <div class="form-group">
+            <label>Dietary Considerations</label>
+            <div class="form-checkboxes">
+              <label class="form-checkbox-item">
+                <input type="checkbox" name="dietary[]" value="vegan" />
+                Vegan options needed
+              </label>
+              <label class="form-checkbox-item">
+                <input type="checkbox" name="dietary[]" value="gluten" />
+                Gluten-friendly options needed
+              </label>
+              <label class="form-checkbox-item">
+                <input type="checkbox" name="dietary[]" value="nutfree" />
+                Nut-free required
+              </label>
+              <label class="form-checkbox-item">
+                <input type="checkbox" name="dietary[]" value="dairyfree" />
+                Dairy-free options needed
+              </label>
+              <label class="form-checkbox-item">
+                <input type="checkbox" name="dietary[]" value="other" />
+                Other (describe below)
+              </label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="catering-message">Tell Us About Your Event</label>
+            <textarea id="catering-message" name="message" rows="4" placeholder="Share any details about your event, vision, or specific requests — the more we know, the better we can serve you."></textarea>
+          </div>
+
+          <div class="form-submit-wrap">
+            <button type="submit" class="btn btn-primary">Send Catering Inquiry</button>
+            <p class="form-note">Our catering team will be in touch within 2 business days.</p>
+            <p class="form-demo-note">Note: This is a demo form. In a live deployment, submissions route to a catering management system for tracking and follow-up.</p>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- ============================================
+         PAST EVENTS GALLERY
+    ============================================ -->
+    <section class="catering-gallery" aria-labelledby="gallery-heading">
+      <div class="section-header">
+        <span class="eyebrow">A Few Past Events</span>
+        <h2 id="gallery-heading">The Work Speaks for Itself.</h2>
+      </div>
+      <div class="gallery-grid">
+        <img
+          src="https://picsum.photos/seed/corporatelunch/700/420"
+          alt="Catered corporate lunch spread in an office setting — neatly arranged platters and bowls on a long table"
+        />
+        <img
+          src="https://picsum.photos/seed/weddingcatering/700/420"
+          alt="Outdoor wedding catering table with florals and an elegant food display at golden hour"
+        />
+        <img
+          src="https://picsum.photos/seed/privatedinner/700/420"
+          alt="Private dinner party table setting with candlelight and plated starters in an intimate atmosphere"
+        />
+      </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER CTA
+    ============================================ -->
+    <section class="footer-cta" aria-label="Footer call to action">
+      <h2>Come hungry. Leave happy.</h2>
+      <p>Fieldstone Kitchen — Open daily, Oakville, ON.</p>
+      <div class="footer-cta-links">
+        <a href="menu.html">View Menu</a>
+        <a href="contact.html">Find Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============================================
+       FOOTER
+  ============================================ -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <div>
+        <div class="footer-logo">
+          <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M10 2C7 2 4 5 4 9c0 3 2 5.5 5.5 7.5L10 18l.5-1.5C14 14.5 16 12 16 9c0-4-3-7-6-7z" stroke="currentColor" stroke-width="1.4" fill="none"/>
+            <path d="M10 6v8M7 8.5c1-.5 2-.5 3 0M13 8.5c-1-.5-2-.5-3 0" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+          </svg>
+          Fieldstone Kitchen
+        </div>
+        <p class="footer-blurb">A family-run cafe and catering company in the heart of Oakville, Ontario. Fresh, seasonal food made from scratch, every single day.</p>
+      </div>
+      <div>
+        <p class="footer-heading">Quick Links</p>
+        <ul class="footer-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menu</a></li>
+          <li><a href="catering.html">Catering</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-hours">
+        <p class="footer-heading">Hours &amp; Contact</p>
+        <p>Mon – Fri: 7:00am – 4:00pm<br />Sat – Sun: 8:00am – 5:00pm</p>
+        <address>
+          Oakville, ON<br />
+          <a href="tel:+19055550142">(905) 555-0142</a><br />
+          <a href="mailto:hello@fieldstonekitchen.ca">hello@fieldstonekitchen.ca</a>
+        </address>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Fieldstone Kitchen. All rights reserved.</p>
+      <p>Designed by Moraine DSG</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

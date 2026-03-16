@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Booking — Harbour Cuts Barbershop</title>
+  <meta name="description" content="Book your chair at Harbour Cuts. Find us in Etobicoke, ON — or call (416) 555-0239." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Harbour<span>Cuts</span></a>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav__cta"><a href="contact.html" class="btn btn--copper">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="contact-hero">
+    <h1 class="contact-hero__heading fade-in">Book Your<br />Chair</h1>
+    <p class="contact-hero__sub fade-in">Online booking, phone, or walk-in — your call.</p>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       CONTACT CONTENT
+  ══════════════════════════════════════════════════════ -->
+  <section class="contact-section">
+    <div class="contact-inner">
+
+      <!-- Booking CTA -->
+      <div class="booking-cta fade-in">
+        <h2 class="booking-cta__heading">Ready to Book?</h2>
+        <a href="#" class="btn btn--copper booking-cta__btn">Book on Booksy</a>
+        <span class="booking-cta__call">
+          Prefer to call?&nbsp;
+          <a href="tel:+14165550239">(416) 555-0239</a>
+        </span>
+      </div>
+
+      <hr class="contact-divider" />
+
+      <!-- Contact info card -->
+      <div class="info-card fade-in">
+        <h2 class="info-card__heading">Find Us</h2>
+        <div class="info-grid">
+
+          <div class="info-item">
+            <p class="info-item__label">Address</p>
+            <p class="info-item__value">
+              <a href="#">247 Lake Shore Blvd W<br />Etobicoke, ON&nbsp;&nbsp;M8V 1B5</a>
+            </p>
+          </div>
+
+          <div class="info-item">
+            <p class="info-item__label">Phone</p>
+            <p class="info-item__value">
+              <a href="tel:+14165550239">(416) 555-0239</a>
+            </p>
+          </div>
+
+          <div class="info-item">
+            <p class="info-item__label">Email</p>
+            <p class="info-item__value">
+              <a href="mailto:hello@harbourcuts.ca">hello@harbourcuts.ca</a>
+            </p>
+          </div>
+
+          <div class="info-item">
+            <p class="info-item__label">Walk-Ins</p>
+            <p class="info-item__value">Welcome — subject to availability</p>
+          </div>
+
+          <div class="info-item info-item--hours">
+            <p class="info-item__label">Hours</p>
+            <p class="info-item__value">
+              Tuesday – Friday &nbsp; 10:00am – 7:00pm<br />
+              Saturday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9:00am – 6:00pm<br />
+              Sunday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10:00am – 4:00pm<br />
+              Monday &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Closed
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Map placeholder -->
+      <div class="map-placeholder fade-in" role="img" aria-label="Map placeholder — 247 Lake Shore Blvd W, Etobicoke">
+        <span class="map-placeholder__icon">⊕</span>
+        <span class="map-placeholder__label">Map · 247 Lake Shore Blvd W, Etobicoke</span>
+      </div>
+
+      <!-- Minimal inquiry form -->
+      <div class="fade-in">
+        <h2 class="contact-form__heading">Send a Message</h2>
+        <p class="contact-form__sub">Not ready to book? Send us a note and we'll get back to you.</p>
+
+        <form class="contact-form" action="#" method="post" novalidate>
+
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="First &amp; Last Name" autocomplete="name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" placeholder="(416) 555-0000" autocomplete="tel" />
+          </div>
+
+          <div class="form-group">
+            <label for="barber">Preferred Barber</label>
+            <div class="select-wrapper">
+              <select id="barber" name="barber">
+                <option value="">No preference</option>
+                <option value="marco">Marco Deluca</option>
+                <option value="james">James Okafor</option>
+                <option value="tyler">Tyler Reyes</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-submit">
+            <button type="submit" class="btn btn--copper">Send Message</button>
+          </div>
+
+        </form>
+      </div>
+
+      <div style="margin-top: 40px;" class="fade-in">
+        <div class="upgrade-note" style="margin-bottom: 14px;">
+          <p><span class="star">★</span> This form can be connected to a live booking system (Booksy, Square, or Fresha) — clients confirm appointments in real time with automated text/email reminders.</p>
+        </div>
+        <div class="upgrade-note">
+          <p><span class="star">★</span> A professional logo and branded email (hello@harbourcuts.ca) can be set up as part of your full brand package — ask us about Moraine DSG's starter offering.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">Harbour<span>Cuts</span></div>
+        <p class="footer__tagline">Premium barbershop in Etobicoke, ON.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Google">Google</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">Navigate</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact & Booking</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Hours</p>
+        <div class="footer__hours">
+          <p>
+            Tue – Fri&nbsp;&nbsp;&nbsp;10am – 7pm<br />
+            Saturday&nbsp;&nbsp;9am – 6pm<br />
+            Sunday&nbsp;&nbsp;&nbsp;&nbsp;10am – 4pm<br /><br />
+            <strong style="color:rgba(245,240,235,0.4);">Closed Mondays</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Harbour Cuts. All rights reserved.</span>
+      <span>Website by <a href="#">Moraine DSG</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

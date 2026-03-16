@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Gallery — Ridgecrest Construction</title>
+  <meta name="description" content="Browse completed construction projects by Ridgecrest Construction across Mississauga, Brampton, Etobicoke, Oakville, and Port Credit — custom homes, commercial renovations, additions, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo__name">RIDGECREST</span>
+        <span class="nav-logo__sub">CONSTRUCTION</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Projects</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Service Areas ▾</a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="service-area-mississauga.html">Mississauga</a></li>
+            <li><a href="service-area-brampton.html">Brampton</a></li>
+            <li><a href="service-area-etobicoke.html">Etobicoke</a></li>
+            <li><a href="service-area-oakville.html">Oakville</a></li>
+            <li><a href="service-area-port-credit.html">Port Credit</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-accent">Get a Quote</a>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <header class="hero hero--short" style="background-image: url('https://picsum.photos/1920/800?grayscale&random=13');">
+      <div class="container">
+        <div class="hero__content">
+          <span class="eyebrow">Our Work</span>
+          <h1 class="hero__title">Project Gallery</h1>
+          <p class="hero__sub">Over 340 completed projects across the GTA. Browse by category to see what Ridgecrest builds.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- GALLERY SECTION -->
+    <section class="section">
+      <div class="container">
+
+        <!-- FILTER BAR -->
+        <div class="filter-bar">
+          <button class="filter-btn filter-btn--active" data-filter="all">All</button>
+          <button class="filter-btn" data-filter="residential">Residential</button>
+          <button class="filter-btn" data-filter="commercial">Commercial</button>
+          <button class="filter-btn" data-filter="additions">Additions</button>
+          <button class="filter-btn" data-filter="newbuild">New Build</button>
+        </div>
+
+        <!-- GALLERY GRID -->
+        <div class="gallery-grid">
+
+          <div class="gallery-item" data-category="newbuild">
+            <img src="https://picsum.photos/600/450?grayscale&random=14" alt="Lakeview Residence — Port Credit custom build">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Lakeview Residence</h4>
+                <span>Port Credit, Mississauga</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="commercial">
+            <img src="https://picsum.photos/600/450?grayscale&random=15" alt="Dixie Road Commercial — Mississauga office renovation">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Dixie Road Commercial</h4>
+                <span>Mississauga, ON</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="commercial">
+            <img src="https://picsum.photos/600/450?grayscale&random=16" alt="Brampton Community Centre renovation">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Brampton Community Centre</h4>
+                <span>Brampton, ON</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="additions">
+            <img src="https://picsum.photos/600/450?grayscale&random=17" alt="Kingsway second-storey addition — Etobicoke">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Kingsway Second-Storey Addition</h4>
+                <span>Kingsway, Etobicoke</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="residential">
+            <img src="https://picsum.photos/600/450?grayscale&random=18" alt="Glen Abbey full renovation — Oakville">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Glen Abbey Full Renovation</h4>
+                <span>Glen Abbey, Oakville</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="newbuild">
+            <img src="https://picsum.photos/600/450?grayscale&random=19" alt="Springdale custom home — Brampton">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Springdale Custom Home</h4>
+                <span>Springdale, Brampton</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="commercial">
+            <img src="https://picsum.photos/600/450?grayscale&random=20" alt="Kerr Village restaurant buildout — Oakville">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Kerr Village Restaurant Buildout</h4>
+                <span>Kerr Village, Oakville</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="additions">
+            <img src="https://picsum.photos/600/450?grayscale&random=21" alt="Cooksville rear extension — Mississauga">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Cooksville Rear Extension</h4>
+                <span>Cooksville, Mississauga</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="residential">
+            <img src="https://picsum.photos/600/450?grayscale&random=22" alt="Mimico bungalow renovation — Etobicoke">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Mimico Bungalow Renovation</h4>
+                <span>Mimico, Etobicoke</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="newbuild">
+            <img src="https://picsum.photos/600/450?grayscale&random=23" alt="Old Oakville infill home — Oakville">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Old Oakville Infill Home</h4>
+                <span>Old Oakville, Oakville</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="additions">
+            <img src="https://picsum.photos/600/450?grayscale&random=24" alt="Heart Lake sunroom addition — Brampton">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Heart Lake Sunroom Addition</h4>
+                <span>Heart Lake, Brampton</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-category="commercial">
+            <img src="https://picsum.photos/600/450?grayscale&random=25" alt="Streetsville medical clinic fit-out — Mississauga">
+            <div class="gallery-item__overlay">
+              <div class="gallery-item__info">
+                <h4>Streetsville Medical Clinic</h4>
+                <span>Streetsville, Mississauga</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section cta-banner section--dark">
+      <div class="container cta-banner__inner">
+        <div>
+          <p class="eyebrow">Ready to Build?</p>
+          <h2 class="section-title">Let's talk about your project.</h2>
+        </div>
+        <a href="contact.html" class="btn btn-accent">Get a Free Quote</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="footer-logo__name">RIDGECREST</span>
+            <span class="footer-logo__sub">CONSTRUCTION</span>
+          </div>
+          <p class="footer-tagline">Building the Greater Toronto Area, one project at a time.</p>
+          <p class="footer-address">Ridgecrest Construction — Mississauga, ON</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Service Areas</h4>
+          <ul class="footer-links">
+            <li><a href="service-area-mississauga.html">Mississauga</a></li>
+            <li><a href="service-area-brampton.html">Brampton</a></li>
+            <li><a href="service-area-etobicoke.html">Etobicoke</a></li>
+            <li><a href="service-area-oakville.html">Oakville</a></li>
+            <li><a href="service-area-port-credit.html">Port Credit</a></li>
+          </ul>
+          <div class="footer-contact">
+            <p><a href="tel:9055550192">(905) 555-0192</a></p>
+            <p><a href="mailto:info@ridgecrestconstruction.ca">info@ridgecrestconstruction.ca</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Ridgecrest Construction. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

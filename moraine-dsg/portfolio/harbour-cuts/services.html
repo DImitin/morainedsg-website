@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services & Pricing — Harbour Cuts Barbershop</title>
+  <meta name="description" content="Haircuts, beard grooming, packages and add-ons. See our full service menu and pricing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════ -->
+  <nav class="nav" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Harbour<span>Cuts</span></a>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li class="nav__cta"><a href="contact.html" class="btn btn--copper">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════ -->
+  <section class="services-hero">
+    <div class="container">
+      <h1 class="services-hero__heading fade-in">Services<br />&amp; Pricing</h1>
+      <p class="services-hero__sub fade-in">Straightforward pricing. No surprises. Every service includes a hot-towel neck finish.</p>
+    </div>
+  </section>
+
+  <!-- Mobile Tabs (visible below 900px) -->
+  <ul class="services-tabs" role="tablist" aria-label="Service categories">
+    <li class="is-active"><a href="#haircuts" role="tab">Haircuts</a></li>
+    <li><a href="#beard" role="tab">Beard &amp; Shave</a></li>
+    <li><a href="#packages" role="tab">Packages</a></li>
+    <li><a href="#addons" role="tab">Add-Ons</a></li>
+  </ul>
+
+  <!-- ══════════════════════════════════════════════════════
+       SERVICES LAYOUT
+  ══════════════════════════════════════════════════════ -->
+  <div class="services-layout">
+
+    <!-- Sidebar (desktop only) -->
+    <aside class="services-sidebar" aria-label="Service categories">
+      <p class="services-sidebar__label">Categories</p>
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav__item is-active"><a href="#haircuts">Haircuts</a></li>
+        <li class="sidebar-nav__item"><a href="#beard">Beard &amp; Shave</a></li>
+        <li class="sidebar-nav__item"><a href="#packages">Packages</a></li>
+        <li class="sidebar-nav__item"><a href="#addons">Add-Ons</a></li>
+      </ul>
+    </aside>
+
+    <!-- Main content -->
+    <main class="services-content">
+
+      <!-- ── Haircuts ── -->
+      <section class="price-section fade-in" id="haircuts">
+        <h2 class="price-section__heading">Haircuts</h2>
+        <div class="price-section__divider"></div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Classic Cut</p>
+            <p class="price-item__desc">Scissor or clipper, tailored to your head shape. Includes consultation and styling.</p>
+          </div>
+          <span class="price-item__price">$35</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Skin Fade</p>
+            <p class="price-item__desc">Zero to any guard — blended with precision. High, mid, or low taper.</p>
+          </div>
+          <span class="price-item__price">$42</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Taper &amp; Lineup</p>
+            <p class="price-item__desc">Clean fade with a sharp edge-up on the hairline and temples.</p>
+          </div>
+          <span class="price-item__price">$45</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Scissor Cut</p>
+            <p class="price-item__desc">Full scissor work for longer hair or detailed texture shaping. No clippers.</p>
+          </div>
+          <span class="price-item__price">$48</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Kids Cut (12 &amp; under)</p>
+            <p class="price-item__desc">Patient, fun, and efficient. Includes shape-up.</p>
+          </div>
+          <span class="price-item__price">$28</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Senior Cut (65+)</p>
+            <p class="price-item__desc">Classic cut with extra time for consultation.</p>
+          </div>
+          <span class="price-item__price">$30</span>
+        </div>
+      </section>
+
+      <!-- ── Beard & Shave ── -->
+      <section class="price-section fade-in" id="beard">
+        <h2 class="price-section__heading">Beard &amp; Shave</h2>
+        <div class="price-section__divider"></div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Beard Trim &amp; Shape</p>
+            <p class="price-item__desc">Outline, taper, and shape. Works with any length.</p>
+          </div>
+          <span class="price-item__price">$25</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Full Beard Service</p>
+            <p class="price-item__desc">Scissor trim, clipper work, edge-up, and hot oil conditioning.</p>
+          </div>
+          <span class="price-item__price">$35</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Hot-Towel Straight Razor Shave</p>
+            <p class="price-item__desc">Pre-shave oil, hot towel, straight razor, cold close. The full ritual.</p>
+          </div>
+          <span class="price-item__price">$45</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Neck &amp; Cheek Cleanup</p>
+            <p class="price-item__desc">Between cuts — keeping lines sharp. Quick and precise.</p>
+          </div>
+          <span class="price-item__price">$15</span>
+        </div>
+      </section>
+
+      <!-- ── Packages ── -->
+      <section class="price-section fade-in" id="packages">
+        <h2 class="price-section__heading">Packages</h2>
+        <div class="price-section__divider"></div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">
+              The Classic <span class="price-badge">Popular</span>
+            </p>
+            <p class="price-item__desc">Haircut + beard trim. The most-booked combo in the shop. Start to finish in under an hour.</p>
+          </div>
+          <span class="price-item__price">$55</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">The Full Treatment</p>
+            <p class="price-item__desc">Haircut + full beard service + hot-towel straight razor finish + scalp massage. The works — reserve extra time.</p>
+          </div>
+          <span class="price-item__price">$85</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">
+              The Sharp Cut <span class="price-badge">Best Value</span>
+            </p>
+            <p class="price-item__desc">Taper + lineup + beard shape-up. In and out, looking sharp. Great for recurring clients.</p>
+          </div>
+          <span class="price-item__price">$65</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Father &amp; Son</p>
+            <p class="price-item__desc">One adult classic cut + one kids cut, back-to-back. Booked as a pair — must be same appointment.</p>
+          </div>
+          <span class="price-item__price">$58</span>
+        </div>
+      </section>
+
+      <!-- ── Add-Ons ── -->
+      <section class="price-section fade-in" id="addons">
+        <h2 class="price-section__heading">Add-Ons</h2>
+        <div class="price-section__divider"></div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Hot Towel Treatment</p>
+            <p class="price-item__desc">Steamed towel wrap — opens pores, relaxes muscles. Add to any service.</p>
+          </div>
+          <span class="price-item__price">$10</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Scalp Massage</p>
+            <p class="price-item__desc">5-minute scalp massage with conditioning oil. Improves circulation, feels incredible.</p>
+          </div>
+          <span class="price-item__price">$12</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Face Wash &amp; Moisturize</p>
+            <p class="price-item__desc">Cleanse, exfoliate, and moisturize. Clean skin, healthy glow.</p>
+          </div>
+          <span class="price-item__price">$15</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Eyebrow Trim</p>
+            <p class="price-item__desc">Scissor trim and clean-up. The finishing detail most men overlook.</p>
+          </div>
+          <span class="price-item__price">$10</span>
+        </div>
+
+        <div class="price-item">
+          <div class="price-item__info">
+            <p class="price-item__name">Hair &amp; Scalp Treatment</p>
+            <p class="price-item__desc">Conditioning treatment applied post-cut. 5 minutes under a warm towel.</p>
+          </div>
+          <span class="price-item__price">$18</span>
+        </div>
+      </section>
+
+      <!-- Upgrade callouts -->
+      <div class="upgrade-note fade-in" style="margin-bottom: 16px;">
+        <p><span class="star">★</span> Prices shown are base rates and may vary slightly by barber and hair length. Final price confirmed at booking.</p>
+      </div>
+
+      <div class="upgrade-note fade-in">
+        <p><span class="star">★</span> Online booking integration (Booksy or Square) can be connected to this site — clients book directly from the page and get automated reminders. Ask us about setup.</p>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__logo">Harbour<span>Cuts</span></div>
+        <p class="footer__tagline">Premium barbershop in Etobicoke, ON.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Facebook">Facebook</a>
+          <a href="#" aria-label="Google">Google</a>
+        </div>
+      </div>
+      <div>
+        <p class="footer__heading">Navigate</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services & Pricing</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact & Booking</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Hours</p>
+        <div class="footer__hours">
+          <p>
+            Tue – Fri&nbsp;&nbsp;&nbsp;10am – 7pm<br />
+            Saturday&nbsp;&nbsp;9am – 6pm<br />
+            Sunday&nbsp;&nbsp;&nbsp;&nbsp;10am – 4pm<br /><br />
+            <strong style="color:rgba(245,240,235,0.4);">Closed Mondays</strong>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Harbour Cuts. All rights reserved.</span>
+      <span>Website by <a href="#">Moraine DSG</a></span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

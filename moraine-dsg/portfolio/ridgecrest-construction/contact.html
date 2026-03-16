@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us — Ridgecrest Construction</title>
+  <meta name="description" content="Get in touch with Ridgecrest Construction for a free project quote. We serve Mississauga, Brampton, Etobicoke, Oakville, and Port Credit with custom builds, renovations, and additions.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=DM+Sans:wght@400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="mainNav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <span class="nav-logo__name">RIDGECREST</span>
+        <span class="nav-logo__sub">CONSTRUCTION</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="services.html">Services</a></li>
+        <li><a href="gallery.html">Projects</a></li>
+        <li class="nav-dropdown">
+          <a href="#">Service Areas ▾</a>
+          <ul class="nav-dropdown__menu">
+            <li><a href="service-area-mississauga.html">Mississauga</a></li>
+            <li><a href="service-area-brampton.html">Brampton</a></li>
+            <li><a href="service-area-etobicoke.html">Etobicoke</a></li>
+            <li><a href="service-area-oakville.html">Oakville</a></li>
+            <li><a href="service-area-port-credit.html">Port Credit</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <a href="contact.html" class="btn btn-accent">Get a Quote</a>
+      <button class="nav-hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- HERO -->
+    <header class="hero hero--short" style="background-image: url('https://picsum.photos/1920/800?grayscale&random=35');">
+      <div class="container">
+        <div class="hero__content">
+          <span class="eyebrow">Get in Touch</span>
+          <h1 class="hero__title">Let's Build Something Together</h1>
+          <p class="hero__sub">Tell us about your project. We'll respond within one business day with honest thoughts on scope, timeline, and next steps — no pressure, no sales pitch.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- CONTACT SECTION -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-layout">
+
+          <!-- CONTACT FORM -->
+          <div>
+            <span class="eyebrow">Send Us a Message</span>
+            <h2 class="section-title">Tell Us About Your Project</h2>
+            <p class="section-sub">Fill out the form below and one of our project managers will be in touch within one business day. The more detail you can share, the better we can prepare for our first conversation.</p>
+
+            <form action="#" method="post" novalidate>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">Full Name <span style="color: var(--rc-accent);">*</span></label>
+                  <input type="text" id="name" name="name" placeholder="Jane Smith" required autocomplete="name">
+                </div>
+                <div class="form-group">
+                  <label for="company">Company Name <span style="color: var(--rc-mid); font-weight: 400;">(optional)</span></label>
+                  <input type="text" id="company" name="company" placeholder="Acme Corp" autocomplete="organization">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="email">Email Address <span style="color: var(--rc-accent);">*</span></label>
+                  <input type="email" id="email" name="email" placeholder="jane@example.com" required autocomplete="email">
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number <span style="color: var(--rc-accent);">*</span></label>
+                  <input type="tel" id="phone" name="phone" placeholder="(905) 555-0100" required autocomplete="tel">
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="project-type">Project Type <span style="color: var(--rc-accent);">*</span></label>
+                  <select id="project-type" name="project-type" required>
+                    <option value="" disabled selected>Select a project type</option>
+                    <option value="new-home-build">New Home Build</option>
+                    <option value="commercial-renovation">Commercial Renovation</option>
+                    <option value="home-addition">Home Addition</option>
+                    <option value="basement">Basement Finishing / Foundation</option>
+                    <option value="full-renovation">Full Home Renovation</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="budget">Rough Budget Range</label>
+                  <select id="budget" name="budget">
+                    <option value="" disabled selected>Select a range</option>
+                    <option value="under-100k">Under $100,000</option>
+                    <option value="100k-250k">$100,000 – $250,000</option>
+                    <option value="250k-500k">$250,000 – $500,000</option>
+                    <option value="500k-1m">$500,000 – $1,000,000</option>
+                    <option value="over-1m">Over $1,000,000</option>
+                    <option value="not-sure">Not Sure Yet</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="location">Project Location <span style="color: var(--rc-accent);">*</span></label>
+                <input type="text" id="location" name="location" placeholder="e.g., 123 Main St, Port Credit, Mississauga" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Tell Us About Your Project <span style="color: var(--rc-accent);">*</span></label>
+                <textarea id="message" name="message" placeholder="Please describe what you're hoping to build or renovate. Include any details about the existing space, your goals, desired timeline, and any specific features or finishes that are important to you." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-accent" style="width: 100%; justify-content: center; padding: 1rem; font-size: 1rem;">Send My Inquiry</button>
+
+              <p style="font-size: 0.8125rem; color: var(--rc-mid); margin-top: 1rem; text-align: center;">We respond to all inquiries within one business day. Your information is never shared with third parties.</p>
+
+            </form>
+          </div>
+
+          <!-- CONTACT INFO SIDEBAR -->
+          <aside>
+            <div class="contact-info-block">
+              <h3>Contact Information</h3>
+
+              <div class="contact-detail">
+                <span class="contact-detail__label">Phone</span>
+                <span class="contact-detail__value"><a href="tel:9055550192">(905) 555-0192</a></span>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail__label">Email</span>
+                <span class="contact-detail__value"><a href="mailto:info@ridgecrestconstruction.ca">info@ridgecrestconstruction.ca</a></span>
+              </div>
+
+              <div class="contact-detail">
+                <span class="contact-detail__label">Office Location</span>
+                <span class="contact-detail__value">Mississauga, ON<br>Serving the Greater Toronto Area</span>
+              </div>
+
+              <div class="contact-hours">
+                <h4>Office Hours</h4>
+                <p>Monday – Friday: 8:00 AM – 6:00 PM</p>
+                <p>Saturday: 9:00 AM – 2:00 PM</p>
+                <p>Sunday: Closed</p>
+              </div>
+
+              <div class="contact-bullets">
+                <h4>Why Work With Us</h4>
+                <ul>
+                  <li>Fixed-cost contracts with no surprise invoices at the end of the job</li>
+                  <li>Dedicated site supervisor on your project every day, with direct contact for the project manager</li>
+                  <li>Two-year craftsmanship warranty covering all completed work</li>
+                </ul>
+              </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; background: var(--rc-light); border-radius: var(--radius); padding: 1.5rem;">
+              <span class="eyebrow" style="margin-bottom: 0.5rem;">Service Areas</span>
+              <div class="city-pills" style="justify-content: flex-start; margin-top: 0.75rem;">
+                <a href="service-area-mississauga.html" class="city-pill" style="font-size: 0.8125rem; padding: 0.4rem 0.875rem;">Mississauga</a>
+                <a href="service-area-brampton.html" class="city-pill" style="font-size: 0.8125rem; padding: 0.4rem 0.875rem;">Brampton</a>
+                <a href="service-area-etobicoke.html" class="city-pill" style="font-size: 0.8125rem; padding: 0.4rem 0.875rem;">Etobicoke</a>
+                <a href="service-area-oakville.html" class="city-pill" style="font-size: 0.8125rem; padding: 0.4rem 0.875rem;">Oakville</a>
+                <a href="service-area-port-credit.html" class="city-pill" style="font-size: 0.8125rem; padding: 0.4rem 0.875rem;">Port Credit</a>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section cta-banner section--dark">
+      <div class="container cta-banner__inner">
+        <div>
+          <p class="eyebrow">Prefer to Call?</p>
+          <h2 class="section-title">We're available Monday – Saturday.</h2>
+        </div>
+        <a href="tel:9055550192" class="btn btn-accent">(905) 555-0192</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span class="footer-logo__name">RIDGECREST</span>
+            <span class="footer-logo__sub">CONSTRUCTION</span>
+          </div>
+          <p class="footer-tagline">Building the Greater Toronto Area, one project at a time.</p>
+          <p class="footer-address">Ridgecrest Construction — Mississauga, ON</p>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="gallery.html">Projects</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Service Areas</h4>
+          <ul class="footer-links">
+            <li><a href="service-area-mississauga.html">Mississauga</a></li>
+            <li><a href="service-area-brampton.html">Brampton</a></li>
+            <li><a href="service-area-etobicoke.html">Etobicoke</a></li>
+            <li><a href="service-area-oakville.html">Oakville</a></li>
+            <li><a href="service-area-port-credit.html">Port Credit</a></li>
+          </ul>
+          <div class="footer-contact">
+            <p><a href="tel:9055550192">(905) 555-0192</a></p>
+            <p><a href="mailto:info@ridgecrestconstruction.ca">info@ridgecrestconstruction.ca</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2024 Ridgecrest Construction. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>

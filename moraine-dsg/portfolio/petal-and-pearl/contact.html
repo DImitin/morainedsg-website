@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact &amp; Booking — Petal &amp; Pearl Nail Studio</title>
+  <meta name="description" content="Book an appointment at Petal &amp; Pearl Nail Studio in Scarborough, ON. Contact us by phone, email, or fill out our booking request form." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ════════════════ NAVBAR ════════════════ -->
+  <nav class="navbar" aria-label="Main navigation">
+    <div class="container">
+      <a href="index.html" class="nav-brand">
+        Petal &amp; Pearl
+        <span>Nail Studio · Scarborough, ON</span>
+      </a>
+
+      <button class="hamburger" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html"    class="nav-link">Home</a></li>
+        <li><a href="services.html" class="nav-link">Services</a></li>
+        <li><a href="gallery.html"  class="nav-link">Gallery</a></li>
+        <li><a href="contact.html"  class="nav-link">Contact</a></li>
+        <li><a href="contact.html"  class="btn btn-gold nav-cta">Book Now</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ════════════════ PAGE HERO ════════════════ -->
+  <section class="page-hero" aria-labelledby="page-title">
+    <div class="container">
+      <div class="reveal">
+        <span class="eyebrow">We'd Love to See You</span>
+        <h1 id="page-title">Book an Appointment</h1>
+        <p>Fill out the form below and we'll confirm your booking within 24 hours. Walk-ins welcome based on availability.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ CONTACT SECTION ════════════════ -->
+  <section class="section contact-section" aria-label="Contact and booking">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- ── LEFT: Form ── -->
+        <div class="contact-form-wrap reveal">
+          <h2>Send a Booking Request</h2>
+          <p class="lead">Tell us a bit about what you're looking for and your preferred timing — we'll take care of the rest.</p>
+
+          <form action="#" method="post" aria-label="Booking request form" novalidate>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name <span aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" autocomplete="name" placeholder="Jane Smith" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" autocomplete="email" placeholder="jane@example.com" required />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="(416) 555-0000" />
+              </div>
+              <div class="form-group">
+                <label for="date">Preferred Date</label>
+                <input type="date" id="date" name="preferred_date" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="service">Service Interest</label>
+              <select id="service" name="service">
+                <option value="" disabled selected>— Select a service —</option>
+                <optgroup label="Manicures">
+                  <option>Classic Manicure ($35)</option>
+                  <option>Gel Manicure ($55)</option>
+                  <option>Gel Remove + Reapply ($65)</option>
+                  <option>French Manicure ($45+)</option>
+                </optgroup>
+                <optgroup label="Pedicures">
+                  <option>Classic Pedicure ($50)</option>
+                  <option>Spa Pedicure ($65)</option>
+                  <option>Gel Pedicure ($80)</option>
+                  <option>Deluxe Pedicure ($90)</option>
+                </optgroup>
+                <optgroup label="Nail Art &amp; Extensions">
+                  <option>Acrylic Full Set ($75+)</option>
+                  <option>Acrylic Fill ($50+)</option>
+                  <option>Custom Nail Art</option>
+                </optgroup>
+                <optgroup label="Packages">
+                  <option>The Essential ($85)</option>
+                  <option>The Signature ($130)</option>
+                  <option>The Luxe ($175)</option>
+                </optgroup>
+                <option value="unsure">Not sure — advise me</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message (optional)</label>
+              <textarea id="message" name="message" placeholder="Any details about your preferred time, nail inspo, or questions…"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold" style="width:100%;font-size:1rem;padding:15px;">
+              Send Booking Request
+            </button>
+
+          </form>
+
+          <!-- Upgrade Note -->
+          <div class="upgrade-note">
+            <span class="star">✦</span> <strong>Moraine DSG — Booking Integration Add-On:</strong>
+            Upgrade to our Growth tier to replace this form with a live booking calendar (Acuity, Fresha, or Square). Clients self-book in real time, and you get automatic confirmation emails and appointment reminders — no back-and-forth required.
+          </div>
+        </div>
+
+        <!-- ── RIGHT: Info + Map ── -->
+        <div class="contact-info-wrap reveal" data-delay="100">
+          <h2>Find Us</h2>
+
+          <div class="info-block">
+            <p class="info-label">Address</p>
+            <address>
+              1284 Ellesmere Road, Unit 7<br>
+              Scarborough, ON M1P 2X5<br>
+              Canada
+            </address>
+          </div>
+
+          <div class="info-block">
+            <p class="info-label">Phone</p>
+            <p><a href="tel:+14165550192" style="color:var(--color-primary)">(416) 555-0192</a></p>
+          </div>
+
+          <div class="info-block">
+            <p class="info-label">Email</p>
+            <p><a href="mailto:hello@petalandpearl.ca" style="color:var(--color-primary)">hello@petalandpearl.ca</a></p>
+          </div>
+
+          <div class="info-block">
+            <p class="info-label">Hours</p>
+            <table class="hours-table" aria-label="Studio hours">
+              <tbody>
+                <tr><td>Monday – Friday</td>  <td>10:00 am – 7:00 pm</td></tr>
+                <tr><td>Saturday</td>          <td>9:00 am – 6:00 pm</td></tr>
+                <tr><td>Sunday</td>            <td>11:00 am – 5:00 pm</td></tr>
+                <tr><td>Stat Holidays</td>     <td>Varies — call ahead</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Map Placeholder -->
+          <div class="map-placeholder" style="margin-top:8px;">
+            <div class="placeholder-img" style="min-height:220px;border-radius:8px;font-size:.85rem;">
+              Google Maps embed — 1284 Ellesmere Rd, Scarborough, ON<br>
+              <span style="font-size:.75rem;margin-top:6px;display:block;">(Replace with <code>&lt;iframe&gt;</code> Google Maps embed)</span>
+            </div>
+          </div>
+
+          <!-- Upgrade Note for domain/email -->
+          <div class="upgrade-note" style="margin-top:20px;">
+            <span class="star">✦</span> <strong>Moraine DSG — Domain &amp; Email Setup:</strong>
+            Upgrade to our Starter or Growth tier to get a professional domain (e.g. petalandpearl.ca) with matching branded email (hello@petalandpearl.ca). Included with all paid website packages.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════ FOOTER ════════════════ -->
+  <footer class="footer" aria-label="Site footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <p class="footer-brand">Petal &amp; Pearl Nail Studio</p>
+          <p class="footer-tagline">Where every detail matters.</p>
+        </div>
+
+        <div>
+          <p class="footer-heading">Contact</p>
+          <div class="footer-info">
+            <p>1284 Ellesmere Road, Unit 7<br>Scarborough, ON M1P 2X5</p>
+            <p>(416) 555-0192</p>
+            <p>hello@petalandpearl.ca</p>
+          </div>
+        </div>
+
+        <div>
+          <p class="footer-heading">Hours</p>
+          <dl class="footer-hours">
+            <dt>Mon – Fri</dt><dd>10:00 am – 7:00 pm</dd>
+            <dt>Saturday</dt><dd>9:00 am – 6:00 pm</dd>
+            <dt>Sunday</dt><dd>11:00 am – 5:00 pm</dd>
+          </dl>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <span>&copy; 2026 Petal &amp; Pearl Nail Studio. All rights reserved.</span>
+        <span>Website by <a href="https://moraine-dsg.ca" target="_blank" rel="noopener">Moraine DSG</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

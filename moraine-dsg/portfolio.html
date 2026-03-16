@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Small Business Website Examples GTA | Moraine DSG Portfolio</title>
+  <meta name="description" content="See what we build. Real demo sites across two tiers — Business and Business Pro — for trades, food & hospitality, health & wellness, and personal services businesses in the GTA.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://moraine-dsg.ca/portfolio.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Moraine Digital Services Group">
+  <meta property="og:url" content="https://moraine-dsg.ca/portfolio.html">
+  <meta property="og:title" content="Small Business Website Examples GTA | Moraine DSG Portfolio">
+  <meta property="og:description" content="See what we build. Real demo sites across two tiers — Business and Business Pro — for trades, food & hospitality, health & wellness, and personal services businesses in the GTA.">
+  <meta property="og:image" content="/assets/images/Moraine_DSG_-_Artifact_Logo_W_Name_3.png">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    /* Tier section headings */
+    .portfolio-tier {
+      margin-bottom: 72px;
+    }
+    .portfolio-tier:last-child {
+      margin-bottom: 0;
+    }
+    .portfolio-tier__header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 32px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--color-border);
+    }
+    .portfolio-tier__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--color-navy);
+      color: var(--color-white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+    }
+    .portfolio-tier__badge--business {
+      background: var(--color-gold);
+      color: var(--color-navy);
+    }
+    .portfolio-tier__badge--commerce {
+      background: var(--color-charcoal);
+      color: var(--color-white);
+    }
+    .portfolio-tier__title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--color-charcoal);
+    }
+    .portfolio-tier__desc {
+      margin-left: auto;
+      font-size: 0.875rem;
+      color: var(--color-mid-gray);
+    }
+    /* Placeholder image palette variations */
+    .portfolio-card--starter .portfolio-card__img {
+      background: linear-gradient(135deg, #0d2540 0%, #153660 100%);
+    }
+    .portfolio-card--business .portfolio-card__img {
+      background: linear-gradient(135deg, #1a2d0a 0%, #2d4f10 100%);
+    }
+    .portfolio-card--commerce .portfolio-card__img {
+      background: linear-gradient(135deg, #2a1200 0%, #4a2a08 100%);
+    }
+    /* 3-col grid for portfolio tiers */
+    .portfolio-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+    @media (max-width: 1024px) {
+      .portfolio-grid-3 { grid-template-columns: repeat(2, 1fr); }
+      .portfolio-tier__desc { display: none; }
+    }
+    @media (max-width: 768px) {
+      .portfolio-grid-3 { grid-template-columns: 1fr; }
+    }
+    /* ── Portfolio Card Slideshow ─────────────────────────────
+       Reusable pattern — copy the .pcard-slideshow HTML block
+       to add a slideshow to any other portfolio card.
+       ─────────────────────────────────────────────────────── */
+    .pcard-slideshow {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      position: relative;
+      overflow: hidden;
+    }
+    .pcard-slides {
+      position: relative;
+      width: 100%;
+      height: 100%;
+    }
+    .pcard-slide {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.6s ease;
+    }
+    /* Inherit gradient from existing tier colour rules */
+    .portfolio-card--starter .pcard-slide { background: linear-gradient(135deg, #0d2540 0%, #153660 100%); }
+    .portfolio-card--business .pcard-slide { background: linear-gradient(135deg, #1a2d0a 0%, #2d4f10 100%); }
+    .portfolio-card--commerce .pcard-slide { background: linear-gradient(135deg, #2a1200 0%, #4a2a08 100%); }
+    .pcard-slide.active { opacity: 1; }
+    .pcard-slide-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 1;
+    }
+    .pcard-slide-label {
+      position: relative;
+      z-index: 0;
+      color: rgba(255,255,255,0.2);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .pcard-dots {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      z-index: 2;
+    }
+    .pcard-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.35);
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .pcard-dot.active {
+      background: rgba(255,255,255,0.9);
+      transform: scale(1.25);
+    }
+    /* "View Demo" text link */
+    .pcard-demo-link {
+      display: inline-block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--color-gold);
+      margin-bottom: 16px;
+      transition: color var(--transition);
+    }
+    .pcard-demo-link:hover {
+      color: var(--color-gold-hover);
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── Navigation ───────────────────────────────────────── -->
+<header class="nav" role="banner">
+  <div class="container nav__inner">
+    <a href="index.html" class="nav__logo" aria-label="Moraine DSG — Home">
+      <img src="images/Moraine_DSG_-_Artifact_Logo_W_Name_3.png" alt="Moraine DSG">
+    </a>
+    <nav aria-label="Primary navigation">
+      <ul class="nav__links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <a href="contact.html" class="btn btn-gold btn-sm nav__cta">Get Started</a>
+    <button class="nav__hamburger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<nav class="nav__mobile" aria-label="Mobile navigation">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="about.html">About</a>
+  <a href="portfolio.html" class="active">Portfolio</a>
+  <a href="contact.html">Contact</a>
+  <a href="contact.html" class="btn btn-gold" style="margin-top:8px;">Get Started</a>
+</nav>
+
+<main>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero hero--short" aria-labelledby="portfolio-hero">
+    <div class="container">
+      <p class="hero__label">Our Work</p>
+      <h1 class="hero__title" id="portfolio-hero">Proof over promises.</h1>
+      <p class="hero__sub">A selection of concept projects. Each one built from scratch around a real industry, real goals — no templates, no shortcuts.</p>
+    </div>
+  </section>
+
+  <!-- ── Portfolio Grid ────────────────────────────────────── -->
+  <section class="section-light" aria-labelledby="portfolio-grid-heading">
+    <div class="container">
+      <div class="section__header section__header--center" style="margin-bottom:64px;">
+        <span class="section-label">Our Work</span>
+        <h2 id="portfolio-grid-heading">Two tiers, real results</h2>
+        <p>Every project below shows what's possible at each build level. Click any card to explore the demo.</p>
+      </div>
+
+      <!-- ── Starter Tier ─────────────────────────────────── -->
+      <div class="portfolio-tier">
+        <div class="portfolio-tier__header">
+          <span class="portfolio-tier__badge">Business</span>
+          <span class="portfolio-tier__title">Up to 5 pages · From $999</span>
+          <span class="portfolio-tier__desc">Clean, fast, gets you online and findable</span>
+        </div>
+        <div class="portfolio-grid-3">
+
+          <article class="portfolio-card portfolio-card--starter fade-in-up" data-delay="1">
+            <!-- ══════════════════════════════════════════════════════
+                 PORTFOLIO CARD SLIDESHOW — REUSABLE PATTERN
+                 To add a slideshow to another card:
+                   1. Copy this entire .pcard-slideshow block
+                   2. Update aria-label and each img src / alt
+                   3. The script at the bottom auto-wires all slideshows
+                 ═════════════════════════════════════════════════════ -->
+            <div class="pcard-slideshow" role="img" aria-label="Petal and Pearl Nail Studio — site preview">
+              <div class="pcard-slides">
+
+                <!-- Slide 1 · replace: portfolio/petal-and-pearl/screenshots/home.jpg -->
+                <div class="pcard-slide active">
+                  <img src="portfolio/petal-and-pearl/screenshots/home.jpg"
+                       alt="Petal &amp; Pearl — Home page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Home Page</span>
+                </div>
+
+                <!-- Slide 2 · replace: portfolio/petal-and-pearl/screenshots/services.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/petal-and-pearl/screenshots/services.jpg"
+                       alt="Petal &amp; Pearl — Services page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Services Page</span>
+                </div>
+
+                <!-- Slide 3 · replace: portfolio/petal-and-pearl/screenshots/gallery.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/petal-and-pearl/screenshots/gallery.jpg"
+                       alt="Petal &amp; Pearl — Gallery page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Gallery Page</span>
+                </div>
+
+                <!-- Slide 4 · replace: portfolio/petal-and-pearl/screenshots/contact.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/petal-and-pearl/screenshots/contact.jpg"
+                       alt="Petal &amp; Pearl — Contact page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Contact Page</span>
+                </div>
+
+              </div>
+              <div class="pcard-dots" aria-hidden="true">
+                <span class="pcard-dot active"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Personal Services</span>
+              <h3>Petal &amp; Pearl Nail Studio</h3>
+              <p>A Scarborough nail salon with a loyal local following but no web presence. Gallery, booking link, and local SEO setup.</p>
+              <a href="portfolio/petal-and-pearl/index.html" class="pcard-demo-link" target="_blank" rel="noopener">View Demo →</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Start a Similar Project</a>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card--starter fade-in-up" data-delay="2">
+            <div class="pcard-slideshow" role="img" aria-label="Clearwater Plumbing — site preview">
+              <div class="pcard-slides">
+
+                <!-- Slide 1 · replace: portfolio/clearwater-plumbing/screenshots/home.jpg -->
+                <div class="pcard-slide active">
+                  <img src="portfolio/clearwater-plumbing/screenshots/home.jpg"
+                       alt="Clearwater Plumbing — Home page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Home Page</span>
+                </div>
+
+                <!-- Slide 2 · replace: portfolio/clearwater-plumbing/screenshots/services.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/clearwater-plumbing/screenshots/services.jpg"
+                       alt="Clearwater Plumbing — Services page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Services Page</span>
+                </div>
+
+                <!-- Slide 3 · replace: portfolio/clearwater-plumbing/screenshots/about.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/clearwater-plumbing/screenshots/about.jpg"
+                       alt="Clearwater Plumbing — About page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">About Page</span>
+                </div>
+
+                <!-- Slide 4 · replace: portfolio/clearwater-plumbing/screenshots/contact.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/clearwater-plumbing/screenshots/contact.jpg"
+                       alt="Clearwater Plumbing — Contact page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Contact Page</span>
+                </div>
+
+              </div>
+              <div class="pcard-dots" aria-hidden="true">
+                <span class="pcard-dot active"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Trades &amp; Home Services</span>
+              <h3>Clearwater Plumbing</h3>
+              <p>A Brampton-based plumber who needed a fast, professional web presence with a quote request form and service area coverage.</p>
+              <a href="portfolio/clearwater-plumbing/index.html" class="pcard-demo-link" target="_blank" rel="noopener">View Demo →</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Start a Similar Project</a>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card--starter fade-in-up" data-delay="3">
+            <div class="pcard-slideshow" role="img" aria-label="Harbour Cuts Barbershop — site preview">
+              <div class="pcard-slides">
+
+                <!-- Slide 1 · replace: portfolio/harbour-cuts/screenshots/home.jpg -->
+                <div class="pcard-slide active">
+                  <img src="portfolio/harbour-cuts/screenshots/home.jpg"
+                       alt="Harbour Cuts — Home page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Home Page</span>
+                </div>
+
+                <!-- Slide 2 · replace: portfolio/harbour-cuts/screenshots/services.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/harbour-cuts/screenshots/services.jpg"
+                       alt="Harbour Cuts — Services page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Services Page</span>
+                </div>
+
+                <!-- Slide 3 · replace: portfolio/harbour-cuts/screenshots/gallery.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/harbour-cuts/screenshots/gallery.jpg"
+                       alt="Harbour Cuts — Gallery page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Gallery Page</span>
+                </div>
+
+                <!-- Slide 4 · replace: portfolio/harbour-cuts/screenshots/contact.jpg -->
+                <div class="pcard-slide">
+                  <img src="portfolio/harbour-cuts/screenshots/contact.jpg"
+                       alt="Harbour Cuts — Contact page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Contact Page</span>
+                </div>
+
+              </div>
+              <div class="pcard-dots" aria-hidden="true">
+                <span class="pcard-dot active"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Personal Services</span>
+              <h3>Harbour Cuts Barbershop</h3>
+              <p>A neighbourhood barbershop in Etobicoke. Services list, team bios, booking link, and Google Maps integration on a tight, focused 4-page site.</p>
+              <a href="portfolio/harbour-cuts/index.html" class="pcard-demo-link" target="_blank" rel="noopener">View Demo →</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Start a Similar Project</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+      <!-- ── Business Tier ────────────────────────────────── -->
+      <div class="portfolio-tier">
+        <div class="portfolio-tier__header">
+          <span class="portfolio-tier__badge portfolio-tier__badge--business">Business Pro</span>
+          <span class="portfolio-tier__title">Up to 10 pages · From $1,799</span>
+          <span class="portfolio-tier__desc">Custom design, SEO foundation, room to grow</span>
+        </div>
+        <div class="portfolio-grid-3">
+
+          <article class="portfolio-card portfolio-card--business fade-in-up" data-delay="1">
+            <div class="pcard-slideshow" role="img" aria-label="Ridgecrest Construction — site preview">
+              <div class="pcard-slides">
+                <div class="pcard-slide active">
+                  <img src="portfolio/ridgecrest-construction/screenshots/home.jpg"
+                       alt="Ridgecrest Construction — Home page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Home Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/ridgecrest-construction/screenshots/services.jpg"
+                       alt="Ridgecrest Construction — Services page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Services Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/ridgecrest-construction/screenshots/about.jpg"
+                       alt="Ridgecrest Construction — About page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">About Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/ridgecrest-construction/screenshots/contact.jpg"
+                       alt="Ridgecrest Construction — Contact page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Contact Page</span>
+                </div>
+              </div>
+              <div class="pcard-dots" aria-hidden="true">
+                <span class="pcard-dot active"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Trades &amp; Construction</span>
+              <h3>Ridgecrest Construction</h3>
+              <p>A Mississauga general contractor. Project gallery, service area pages for local SEO, integrated quote request form, and a blog for ongoing content.</p>
+              <a href="portfolio/ridgecrest-construction/index.html" class="pcard-demo-link" target="_blank" rel="noopener">View Demo →</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Start a Similar Project</a>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card--business fade-in-up" data-delay="2">
+            <div class="pcard-slideshow" role="img" aria-label="Fieldstone Kitchen — site preview">
+              <div class="pcard-slides">
+                <div class="pcard-slide active">
+                  <img src="portfolio/fieldstone-kitchen/screenshots/home.jpg"
+                       alt="Fieldstone Kitchen — Home page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Home Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/fieldstone-kitchen/screenshots/menu.jpg"
+                       alt="Fieldstone Kitchen — Menu page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Menu Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/fieldstone-kitchen/screenshots/catering.jpg"
+                       alt="Fieldstone Kitchen — Catering page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Catering Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/fieldstone-kitchen/screenshots/contact.jpg"
+                       alt="Fieldstone Kitchen — Contact page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Contact Page</span>
+                </div>
+              </div>
+              <div class="pcard-dots" aria-hidden="true">
+                <span class="pcard-dot active"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Food &amp; Hospitality</span>
+              <h3>Fieldstone Kitchen</h3>
+              <p>A family-run café in Oakville. Online menu, catering inquiry form, reservations integration, and a seasonal events page.</p>
+              <a href="portfolio/fieldstone-kitchen/index.html" class="pcard-demo-link" target="_blank" rel="noopener">View Demo →</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Start a Similar Project</a>
+            </div>
+          </article>
+
+          <article class="portfolio-card portfolio-card--business fade-in-up" data-delay="3">
+            <div class="pcard-slideshow" role="img" aria-label="Apex Physio &amp; Wellness — site preview">
+              <div class="pcard-slides">
+                <div class="pcard-slide active">
+                  <img src="portfolio/apex-physio/screenshots/home.jpg"
+                       alt="Apex Physio &amp; Wellness — Home page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Home Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/apex-physio/screenshots/services.jpg"
+                       alt="Apex Physio &amp; Wellness — Services page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Services Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/apex-physio/screenshots/team.jpg"
+                       alt="Apex Physio &amp; Wellness — Team page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Team Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/apex-physio/screenshots/booking.jpg"
+                       alt="Apex Physio &amp; Wellness — Booking page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Booking Page</span>
+                </div>
+                <div class="pcard-slide">
+                  <img src="portfolio/apex-physio/screenshots/contact.jpg"
+                       alt="Apex Physio &amp; Wellness — Contact page"
+                       class="pcard-slide-img"
+                       onerror="this.style.display='none'">
+                  <span class="pcard-slide-label">Contact Page</span>
+                </div>
+              </div>
+              <div class="pcard-dots" aria-hidden="true">
+                <span class="pcard-dot active"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+                <span class="pcard-dot"></span>
+              </div>
+            </div>
+            <div class="portfolio-card__body">
+              <span class="portfolio-card__tag">Health &amp; Wellness</span>
+              <h3>Apex Physio &amp; Wellness</h3>
+              <p>A multi-practitioner clinic in North York. Service pages per discipline, team profiles, online booking integration, and local SEO across four postal codes.</p>
+              <a href="portfolio/apex-physio/index.html" class="pcard-demo-link" target="_blank" rel="noopener">View Demo →</a>
+              <a href="contact.html" class="btn btn-secondary btn-sm">Start a Similar Project</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+
+
+    </div>
+  </section>
+
+  <!-- ── CTA Banner ─────────────────────────────────────────── -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Your business could be next.</h2>
+      <p>Tell us what you're building. We'll tell you how we can help.</p>
+      <a href="contact.html" class="btn btn-gold">Start Your Project</a>
+    </div>
+  </section>
+
+</main>
+
+<!-- ── Footer ────────────────────────────────────────────── -->
+<footer class="footer" role="contentinfo">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <img src="images/Moraine_DSG_-_Artifact_Logo_W_Name_3.png" alt="Moraine DSG" class="footer__logo">
+        <p class="footer__tagline">Web design &amp; digital services for GTA small businesses.</p>
+        <p class="footer__copy">&copy; 2026 Moraine Digital Services Group. All rights reserved.</p>
+      </div>
+      <div>
+        <p class="footer__heading">Quick Links</p>
+        <ul class="footer__links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services &amp; Pricing</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="footer__heading">Get In Touch</p>
+        <div class="footer__contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>info@morainedsg.onmicrosoft.com</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.5 2 2 0 0 1 3.6 1.32h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>(437) 240-5535</span>
+        </div>
+        <div class="footer__contact-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Greater Toronto Area, ON</span>
+        </div>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/profile.php?id=61582225273660" target="_blank" rel="noopener noreferrer" class="footer__social-link" aria-label="Moraine DSG on Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      Built with care in the GTA &mdash; Moraine Digital Services Group
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+/* ── Portfolio card slideshows ─────────────────────────────
+   Auto-wires every .pcard-slideshow on the page.
+   3.5 s interval · fades · pauses on hover · swipe on mobile.
+   ─────────────────────────────────────────────────────── */
+(function () {
+  document.querySelectorAll('.pcard-slideshow').forEach(function (ss) {
+    var slides = ss.querySelectorAll('.pcard-slide');
+    var dots   = ss.querySelectorAll('.pcard-dot');
+    var cur    = 0;
+    var timer  = null;
+    var DELAY  = 3500;
+
+    function goTo(n) {
+      slides[cur].classList.remove('active');
+      dots[cur].classList.remove('active');
+      cur = (n + slides.length) % slides.length;
+      slides[cur].classList.add('active');
+      dots[cur].classList.add('active');
+    }
+
+    ss.addEventListener('mouseenter', function () { goTo(cur + 1); });
+
+    var touchStartX = 0;
+    ss.addEventListener('touchstart', function (e) {
+      touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    ss.addEventListener('touchend', function (e) {
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 40) { goTo(dx < 0 ? cur + 1 : cur - 1); }
+    }, { passive: true });
+  });
+}());
+</script>
+</body>
+</html>
